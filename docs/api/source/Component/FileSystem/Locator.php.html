@@ -1,8 +1,44 @@
-<?php
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
 /**
  * This file is part of the Sagres package.
  *
- * (c) uno costa <nuno@francodacosta.com>
+ * (c) uno costa &lt;nuno@francodacosta.com&gt;
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -24,7 +60,7 @@ use Sagres\Component\FileSystem\Locator\Node\AbstractNode;
  * @package Sagres
  * @subpackage FileSystem
  *
- * @author nuno costa <nuno@francodacosta.com>
+ * @author nuno costa &lt;nuno@francodacosta.com&gt;
  * @since 10-11-2011
  * @license MIT
  */
@@ -48,9 +84,9 @@ class Locator
      */
     public function addSingle($path)
     {
-        $node = $this->resolveNode($path);
+        $node = $this-&gt;resolveNode($path);
 
-        $this->addNode($node);
+        $this-&gt;addNode($node);
     }
 
     /**
@@ -60,18 +96,18 @@ class Locator
      */
     public function addNode(AbstractNode $node)
     {
-        switch ($node->getType()) {
+        switch ($node-&gt;getType()) {
             case $node::TYPE_LINK:
             case $node::TYPE_FILE:
-                $this->files[] = $node;
+                $this-&gt;files[] = $node;
                 break;
 
             case $node::TYPE_FOLDER:
-                $this->folders[] = $node;
+                $this-&gt;folders[] = $node;
                 break;
 
             default:
-                throw new \UnexpectedValueException('Can not process nodes of type ' . $node->getType());
+                throw new \UnexpectedValueException('Can not process nodes of type ' . $node-&gt;getType());
                 break;
         }
     }
@@ -95,15 +131,15 @@ class Locator
         }
 
         $path = new FolderNode($path);
-        $this->addNode($path);
+        $this-&gt;addNode($path);
 
 
         if ($dh = opendir($path)) {
             while (($filename = readdir($dh)) !== false) {
                 $file = $path . $filename;
                 if(!is_dir($file)) {
-                    if (preg_match( $filter, $filename) > 0) {
-                        $this->addSingle($file);
+                    if (preg_match( $filter, $filename) &gt; 0) {
+                        $this-&gt;addSingle($file);
                     }
                 }
             }
@@ -121,11 +157,11 @@ class Locator
      * @param String $filter regular expression
      */
     public function addRecursive($path, $filter = '/.*/') {
-        $this->add($path, $filter);
+        $this-&gt;add($path, $filter);
 
         $found = glob($path . DIRECTORY_SEPARATOR . '*', GLOB_ONLYDIR);
         foreach($found as $subfolder) {
-            $this->add($subfolder, $filter);
+            $this-&gt;add($subfolder, $filter);
         }
     }
 
@@ -163,7 +199,7 @@ class Locator
      */
     public function getFiles()
     {
-        return $this->files;
+        return $this-&gt;files;
     }
 
     /**
@@ -173,7 +209,7 @@ class Locator
      */
     public function getFolders()
     {
-        return $this->folders;
+        return $this-&gt;folders;
     }
 
     /**
@@ -182,6 +218,14 @@ class Locator
      */
     public function get()
     {
-        return array_merge($this->getFolders(), $this->getFiles());
+        return array_merge($this-&gt;getFolders(), $this-&gt;getFiles());
     }
-}
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all()
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

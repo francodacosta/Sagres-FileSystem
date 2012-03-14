@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="0.18.1" title="">
+  <file path="Component/FileSystem/Locator/Node/FileNode.php" hash="eadffc1fbf9454ec02f9d7b5ba2b64cb">
+    <parse_markers>
+      <error line="6" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="4" code="50000">No DocBlock was found for FileNode</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Component/FileSystem/Locator/Node/FileNode.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Sagres\Component\FileSystem\Locator\Node" line="4">
+      <name>FileNode</name>
+      <full_name>\Sagres\Component\FileSystem\Locator\Node\FileNode</full_name>
+      <extends>\Sagres\Component\FileSystem\Locator\Node\AbstractNode</extends>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="6">
+        <name>__construct</name>
+        <type>function</type>
+        <argument line="6">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>eJxlzsEKgkAQBuD7PsUeOuihF9AoIhQCiUAvgSDrOKaw7i47IyThu6cJXfqP/3z8zOHkOieMGpCcApS5enqk8mIHZw0aLtNeYz4R41BmFhRbX95sg7EQoBWRXO9rIfHFaBqS55rYK+C1FG8hl7ix1j3IdjTAvTWyqsCaRY3Awc4p7sIv2/CaHXc97Y+EXEwOA0LdRlHxuCdVes2SMP5Bp/zyZBT9L25mFvMH3RlKQA==</source>
+  </file>
+  <file path="Component/FileSystem/Locator/Node/FolderNode.php" hash="5c899fb71bf20d086f9484c63fadf763">
+    <parse_markers>
+      <error line="6" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="12" code="50010">No DocBlock was found for method getPath()</error>
+      <error line="4" code="50000">No DocBlock was found for FolderNode</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Component/FileSystem/Locator/Node/FolderNode.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Sagres\Component\FileSystem\Locator\Node" line="4">
+      <name>FolderNode</name>
+      <full_name>\Sagres\Component\FileSystem\Locator\Node\FolderNode</full_name>
+      <extends>\Sagres\Component\FileSystem\Locator\Node\AbstractNode</extends>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="6">
+        <name>__construct</name>
+        <type>function</type>
+        <argument line="6">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="12">
+        <name>getPath</name>
+        <type>function</type>
+      </method>
+    </class>
+    <source>eJxtj0Frg0AQhe/7K6aQg0JT6FWbFkkUCqER9RIQZLOOUdDdZXeEhuJ/r1ZqAslcZhi+eW/e24euNZO8Q6u5QEj52aDNt6rTSqKkPGpaTC+WsMv3SnBSJv9SJfqMiZZbC5FqSzTTCvCbUJYWgpMlwwVNS/bDYCzdn9pGQNVLQY2SUBRCyZHqBTkrzal2/7AZnmpFdWPX7xYpu2h0LLaV52XHOCyiw34XJq6/oJqb8VHPu9ecmYE9fOGMFI+Qc+c8ncJmkV04ny1MUzm7zyTcZofkWKRhHCTBOMLTBmw/hZ/9n2H96ro30rfyc3+BBzrXaMPV0iD1Rs5n/7mGX3Q7g2k=</source>
+  </file>
+  <file path="Component/FileSystem/Locator/Node/AbstractNode.php" hash="dd1e3491c1d7c5e3d832ed6a05cca9bb">
+    <parse_markers>
+      <error line="10" code="50018">No DocBlock was found for property $name</error>
+      <error line="11" code="50018">No DocBlock was found for property $path</error>
+      <error line="12" code="50018">No DocBlock was found for property $type</error>
+      <error line="14" code="50018">No DocBlock was found for property $readable</error>
+      <error line="15" code="50018">No DocBlock was found for property $writable</error>
+      <error line="16" code="50018">No DocBlock was found for property $exists</error>
+      <error line="18" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="37" code="50010">No DocBlock was found for method isReadable()</error>
+      <error line="41" code="50010">No DocBlock was found for method isWritable()</error>
+      <error line="45" code="50010">No DocBlock was found for method exists()</error>
+      <error line="50" code="50010">No DocBlock was found for method getName()</error>
+      <error line="54" code="50010">No DocBlock was found for method getPath()</error>
+      <error line="59" code="50010">No DocBlock was found for method getType()</error>
+      <error line="64" code="50010">No DocBlock was found for method setType()</error>
+      <error line="69" code="50010">No DocBlock was found for method __toString()</error>
+      <error line="4" code="50000">No DocBlock was found for AbstractNode</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Component/FileSystem/Locator/Node/AbstractNode.php</error>
+    </parse_markers>
+    <class final="false" abstract="true" namespace="Sagres\Component\FileSystem\Locator\Node" line="4">
+      <name>AbstractNode</name>
+      <full_name>\Sagres\Component\FileSystem\Locator\Node\AbstractNode</full_name>
+      <extends/>
+      <extends>\Sagres\Component\FileSystem\Locator\Node\NodeInterface</extends>
+      <constant namespace="Sagres\Component\FileSystem\Locator\Node" line="6">
+        <name>TYPE_FOLDER</name>
+        <value><![CDATA[0]]></value>
+      </constant>
+      <constant namespace="Sagres\Component\FileSystem\Locator\Node" line="7">
+        <name>TYPE_FILE</name>
+        <value><![CDATA[1]]></value>
+      </constant>
+      <constant namespace="Sagres\Component\FileSystem\Locator\Node" line="8">
+        <name>TYPE_LINK</name>
+        <value><![CDATA[2]]></value>
+      </constant>
+      <property final="false" static="false" visibility="private" line="10">
+        <name>$name</name>
+        <default><![CDATA[null]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="11">
+        <name>$path</name>
+        <default><![CDATA[null]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="12">
+        <name>$type</name>
+        <default><![CDATA[null]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="14">
+        <name>$readable</name>
+        <default><![CDATA[false]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="15">
+        <name>$writable</name>
+        <default><![CDATA[false]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="16">
+        <name>$exists</name>
+        <default><![CDATA[false]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="18">
+        <name>__construct</name>
+        <type>function</type>
+        <argument line="18">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Sagres\Component\FileSystem\Locator\Node" line="27" package="Default">
+        <name>processPath</name>
+        <type>function</type>
+        <docblock line="23">
+          <description><![CDATA[processes the path and populates this class with all falues]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="23" name="param" description="" type="\Sagres\Component\FileSystem\Locator\Node\unknown_type" variable="$path">
+            <type by_reference="false">\Sagres\Component\FileSystem\Locator\Node\unknown_type</type>
+          </tag>
+        </docblock>
+        <argument line="27">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="37">
+        <name>isReadable</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="41">
+        <name>isWritable</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="45">
+        <name>exists</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="50">
+        <name>getName</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="54">
+        <name>getPath</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="59">
+        <name>getType</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Sagres\Component\FileSystem\Locator\Node" line="64">
+        <name>setType</name>
+        <type>function</type>
+        <argument line="64">
+          <name>$type</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="69">
+        <name>__toString</name>
+        <type>function</type>
+      </method>
+    </class>
+    <source>eJyFVE2L2zAQvftXzCGHNlC27TX9pM1CaEiXzcJSCBhFmSSisiQ046ZL2f9eSZbz5cTrU8Zv9PTevIk/fHZbVxhRITkhEeZi45EW32zlrEHDi1ulcf5EjNViaqVg6xczu8JRUYglsReSQWpBBF9zGVFQldNYhfMEsZ4YRr8O/MW/AsIjrSGGh1934/L25/T7+B4+wttRB5pMxwF41wGmk9mPALwPIiLivPojGGEQbYT3ptZ6dIo4wdvLCD+5w5lTyKNYiaWO8FpowrOTO6+4B8a/ioL9Pdig9VIrCevaSFbWQFkmW76W/CqJfJ3aminFZ8BbRW8+OW8lEt2FjtzX3Pbc0N4Mh82JIeROJOAtQvItzAqcdbUOuuJrRTmynYqo1lFijdRSfHHCiwpq89vYnSnThNKlueEmG7WMknF1cNNVedlNzmkpCOPPE0fHppvQEtoBD+MNC1o21TWioyAVlW11rfso19DdVvvu47mfx6noviU/t+6Ra2/OFbUpXiZ7bO/uJ2sl9pHlAfUTNU2jPocb5FmMrJ8optqnJrCkJelnOeR+XcxDWM4XaOL+ntJ0N5cyU/ocXNna/KUYdPk6f2q2c/bKbF5Qth9DS/f8H7BTqMY=</source>
+  </file>
+  <file path="Component/FileSystem/Locator/Node/NodeInterface.php" hash="02204c886ec38ce44a4780d439d2da68">
+    <parse_markers>
+      <error line="6" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="7" code="50010">No DocBlock was found for method isReadable()</error>
+      <error line="8" code="50010">No DocBlock was found for method isWritable()</error>
+      <error line="9" code="50010">No DocBlock was found for method exists()</error>
+      <error line="10" code="50010">No DocBlock was found for method getName()</error>
+      <error line="11" code="50010">No DocBlock was found for method getPath()</error>
+      <error line="12" code="50010">No DocBlock was found for method getType()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Component/FileSystem/Locator/Node/NodeInterface.php</error>
+    </parse_markers>
+    <interface namespace="Sagres\Component\FileSystem\Locator\Node" line="4">
+      <name>NodeInterface</name>
+      <full_name>\Sagres\Component\FileSystem\Locator\Node\NodeInterface</full_name>
+      <extends/>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="6">
+        <name>__construct</name>
+        <type>function</type>
+        <argument line="6">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="7">
+        <name>isReadable</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="8">
+        <name>isWritable</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="9">
+        <name>exists</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="10">
+        <name>getName</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="11">
+        <name>getPath</name>
+        <type>function</type>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="12">
+        <name>getType</name>
+        <type>function</type>
+      </method>
+    </interface>
+    <source>eJx9j8EKgkAQhu/7FHvoYM9g0CEIgpBIocuCrOuoCzo77IyQRO+eduiUzm3m+36Y/3CkjhTaAZisA53bNgKbUxgoIKCYs+8hn1hgMNfgrIRoslBDqtQFBWKzhJbDb1Mvpeehseq9082ITnxAXZYuIEscnSQ7stLt07+e5zvY2lY9JKvGI3rZMuDpWXiNtiDZ3HcD3+b3NnAx0Tf9/gCl42vI</source>
+  </file>
+  <file path="Component/FileSystem/Locator/Node/LinkNode.php" hash="102d96cc7491e36dcc13736e0a290d0e">
+    <parse_markers>
+      <error line="6" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="4" code="50000">No DocBlock was found for LinkNode</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Component/FileSystem/Locator/Node/LinkNode.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Sagres\Component\FileSystem\Locator\Node" line="4">
+      <name>LinkNode</name>
+      <full_name>\Sagres\Component\FileSystem\Locator\Node\LinkNode</full_name>
+      <extends>\Sagres\Component\FileSystem\Locator\Node\AbstractNode</extends>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="6">
+        <name>__construct</name>
+        <type>function</type>
+        <argument line="6">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>eJxlzsEKgkAUBdD9fMUsXOiiHxijiCiIRALdBAMyjs8c0pnB94Qk/Pc0oU13eTlc7nbvG8+s6gC90sAz9egB5dF13lmwJM+mhWxEgk4mTityvUxdBTFjulWIPDH2uRQcXgS2Qn4okXqlaSnZm/E5fihbo3k9WE3GWV4U2tlZDZrCwCtqoi9b8ZKAGoObHQLlo4cQoa2FyO+3U5Fc0msU/6BX/XxSiP/F1Uxs+gDod0pc</source>
+  </file>
+  <file path="Component/FileSystem/Exception/ResourceNotFoundException.php" hash="b9f6acd97dfb5479c8895cfaded53e56">
+    <parse_markers>
+      <error line="4" code="50000">No DocBlock was found for ResourceNotFoundException</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Component/FileSystem/Exception/ResourceNotFoundException.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Sagres\Component\FileSystem\Exception" line="4">
+      <name>ResourceNotFoundException</name>
+      <full_name>\Sagres\Component\FileSystem\Exception\ResourceNotFoundException</full_name>
+      <extends>\Exception</extends>
+    </class>
+    <source>eJxFyzEOgzAMBdDdp8g9itQBNSMDrFmi5KsgEdvCRgKh3p2N7u91b52VODeY5oIw5e8GS700FQZ7isuK6TRHS5+jQH0RfhGVNZuFESb7VjCIR9m5PiLgcHC18E90Ef1uI2ApgA==</source>
+  </file>
+  <file path="Component/FileSystem/Locator.php" hash="ea9d6d4339337c1dab022fc3ce32bde0" package="Sagres">
+    <docblock line="2">
+      <description><![CDATA[This file is part of the Sagres package.]]></description>
+      <long-description><![CDATA[<p>(c) uno costa <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m">&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m</a></p>
+
+<p>For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.</p>]]></long-description>
+      <tag line="2" name="package" description="Sagres"/>
+    </docblock>
+    <namespace-alias name="ResourceNotFoundException">Sagres\Component\FileSystem\Exception\ResourceNotFoundException</namespace-alias>
+    <namespace-alias name="FolderNode">Sagres\Component\FileSystem\Locator\Node\FolderNode</namespace-alias>
+    <namespace-alias name="FileNode">Sagres\Component\FileSystem\Locator\Node\FileNode</namespace-alias>
+    <namespace-alias name="LinkNode">Sagres\Component\FileSystem\Locator\Node\LinkNode</namespace-alias>
+    <namespace-alias name="AbstractNode">Sagres\Component\FileSystem\Locator\Node\AbstractNode</namespace-alias>
+    <class final="false" abstract="false" namespace="Sagres\Component\FileSystem" line="31" package="Sagres\FileSystem">
+      <name>Locator</name>
+      <full_name>\Sagres\Component\FileSystem\Locator</full_name>
+      <extends/>
+      <docblock line="20">
+        <description><![CDATA[The Locator class makes it easy to locate/specify files or folders in the
+FileSystem]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="20" name="package" description="Sagres"/>
+        <tag line="20" name="subpackage" description="FileSystem"/>
+        <tag line="20" name="author" description="nuno costa &lt;nuno@francodacosta.com&gt;"/>
+        <tag line="20" name="since" description="10-11-2011"/>
+        <tag line="20" name="license" description="MIT"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="37" package="Default">
+        <name>$folders</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="33">
+          <description><![CDATA[Holds folder Node types]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="33" name="var" description="" type="Array">
+            <type by_reference="false">Array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="43" package="Default">
+        <name>$files</name>
+        <default><![CDATA[array()]]></default>
+        <docblock line="39">
+          <description><![CDATA[Holds File Node and Link Node types]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="39" name="var" description="" type="Array">
+            <type by_reference="false">Array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="49" package="Default">
+        <name>addSingle</name>
+        <type>function</type>
+        <docblock line="45">
+          <description><![CDATA[adds a single resource to the current list]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="45" name="param" description="" type="String" variable="$path">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="61" package="Default">
+        <name>addNode</name>
+        <type>function</type>
+        <docblock line="56">
+          <description><![CDATA[ads a filesystem node abstraction to the current set]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="56" name="param" description="" type="\Sagres\Component\FileSystem\Locator\Node\AbstractNode" variable="$node">
+            <type by_reference="false">\Sagres\Component\FileSystem\Locator\Node\AbstractNode</type>
+          </tag>
+          <tag line="56" name="throws" description="" type="\UnexpectedValueException">
+            <type by_reference="false">\UnexpectedValueException</type>
+          </tag>
+        </docblock>
+        <argument line="61">
+          <name>$node</name>
+          <default><![CDATA[]]></default>
+          <type>AbstractNode</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="90" package="Default">
+        <name>add</name>
+        <type>function</type>
+        <docblock line="79">
+          <description><![CDATA[adds a folder resource to the list, optionally filtering out resources]]></description>
+          <long-description><![CDATA[<p>File Resources that do not match the $filter regular expression will <em>not</em>
+be included.</p>
+
+<p>This function is <strong>not recursive</strong>, so <strong>files inside other folders will not be included</strong></p>]]></long-description>
+          <tag line="79" name="param" description="" type="String" variable="$path">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="79" name="param" description="- regular expression" type="string" variable="$filter">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="90">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="90">
+          <name>$filter</name>
+          <default><![CDATA['/.*/']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="123" package="Default">
+        <name>addRecursive</name>
+        <type>function</type>
+        <docblock line="115">
+          <description><![CDATA[does the same than Locator::add() but recursive]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="115" name="see" description="\Sagres\Component\FileSystem\Locator::add" refers="\Sagres\Component\FileSystem\Locator::add"/>
+          <tag line="115" name="param" description="" type="String" variable="$path">
+            <type by_reference="false">String</type>
+          </tag>
+          <tag line="115" name="param" description="regular expression" type="String" variable="$filter">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+        <argument line="123">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="123">
+          <name>$filter</name>
+          <default><![CDATA['/.*/']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Sagres\Component\FileSystem" line="139" package="Default">
+        <name>resolveNode</name>
+        <type>function</type>
+        <docblock line="132">
+          <description><![CDATA[resolves a path into a node object]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="132" name="param" description="" type="\Sagres\Component\FileSystem\unknown_type" variable="$node">
+            <type by_reference="false">\Sagres\Component\FileSystem\unknown_type</type>
+          </tag>
+          <tag line="132" name="throws" description="" type="\Sagres\Component\FileSystem\UnexpectedValueException">
+            <type by_reference="false">\Sagres\Component\FileSystem\UnexpectedValueException</type>
+          </tag>
+          <tag line="132" name="return" description="" type="\Sagres\Component\FileSystem\Locator\Node\AbstractNode">
+            <type by_reference="false">\Sagres\Component\FileSystem\Locator\Node\AbstractNode</type>
+          </tag>
+        </docblock>
+        <argument line="139">
+          <name>$node</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="164" package="Default">
+        <name>getFiles</name>
+        <type>function</type>
+        <docblock line="160">
+          <description><![CDATA[get all files nodes]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="160" name="return" description="of AbstractNode Implementation (FileNode and LinkNode)" type="Array">
+            <type by_reference="false">Array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="174" package="Default">
+        <name>getFolders</name>
+        <type>function</type>
+        <docblock line="169">
+          <description><![CDATA[get all folder nodes]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="169" name="return" description="of AbstractNode Implementation (FolderNode)" type="Array">
+            <type by_reference="false">Array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="183" package="Default">
+        <name>get</name>
+        <type>function</type>
+        <docblock line="179">
+          <description><![CDATA[return all nodes (file and folder)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="179" name="return" description="of AbstractNode Implementation (FileNode, LinkNode and FolderNode)" type="Array">
+            <type by_reference="false">Array</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJylV21v4kYQ/s6vmJOQMIiEpB9zR5o0R9roKDlBWikqFVrsBdyYXeRdh0NV/ntnZm1jDA5Jyhdgd97nmZf98vNqsap1Wq0atOBhERqYhZEE/F6J2IKegV1IGIl5LOnIfxJzeYq0RO75TUiUBl8bK+CLwt9Xs1goXweCz059vbxMiW91zKJmSRQhx2oTh/OFBaECiEJfKoNK1UzHS2FDrdqwiqTAs+dQrpmvf3fTG4x6JIottAthYS0MBKGxcThNrAxgHdoF3qD1RiexL1FRwObCVWp76goedWo1JZbS4EV2Or7Ry5VWUtnxLeoYbYyVy8+1WmJepRj3fvhyRWaPh9IpHmh7qxMV5Defjwrpa19YHY8HaPL4VkeBjOnnexnx/ANs/VA9fYDteoqxF751rFsYYbocGfiRMAaW4gnhE1rAnG7AaojoWnbMSvrhbMMZNYDkM/YbSRUlnXGTq06BtJ9JuDLJNDvdpxeJXaBo9SaooqxQISDOz07Oz09+Ojs/58MMor/fPTB0nFupk7V/a4Af9p4+LfgN3TCpM0DBAbtZka3u+upZxHAdx2KTnnT4exWHzxgVqGdR6IIgIq+JsT2ogZx18qmOKIkf0cbBf0WXCFCVAAzMHNXFKcQpjVSYfhLHiBGsYmNzldg8xBJGWJhqDvWVsItd3ckUI4q9QPlUHKRhxNI9pm0ykYsqfeqKnOpCnUr75JIsiJ4Z5il9ajPTOhqU6O6JFe/p6uWAZ+QYB4AhA6xIpKgmy0pOGln2sVgCztCcwC5ivTYw/kPJHwh0bFB/iiiReU84FhJ2YF9+OToGu56/AOfqyeVc2gdMv9dsFmjo41M/ZaKLi4fH771J/27w7eJ1ktu7fm+XpBBjjttff1NiFDeAMt00luKpkJvDKu77X3vDaiWuFt6rJpAzkUR2XywnBRROlcq8eI0boRAKFmtE+xILnfQaHoYYWWjAKewFu9Ks7O9LJQYdCF2zKFcXVVUbNNsloohbpZVcVjqxOXlW7JlQbgzZMDJuWAaafcIB6y9Ydt3JQiHzJMIegdFAeYbQtw5xSreQPJc4pfnsR0kgg9OSMrc2ZMDF3y3iRLFYNSZ8lq1WG+cxnrpOEyoTIpY1mrBt+KyQuAp68hgdbyvZlUmvUs9ODvh2rOpcS2nnMrrQ6Jy2Oo2s7PKEhjPvU2gmQRinXahccFuoVa4FjhPx1GDnZ3TZaBZBs21sTNlledv1IG+AOVmp/2X9sWA2toqAJOmVVNXWrxeEIc/j+UCbEnIgogPmCIj+U7cLMxEZWWZlO3hL60LmYC5mv1CKgSSqPVOKpmMa5xPGsJelqL0V3oRLOKti3w1PNnBY475RLvqvn+z+8yNtZBadA3VfLvxAc2VKMBRcLFGVLRQXF4TDJkyTQhWVa8FIuUP/7loZ7dbK+ytlmJlWWTLFGZ4HvkS9M7y5AJB/HulpXhtf74a9m4f74eNk1Pt+PbzGn1QxrUYbfu3f/zK5H/QfkaYQc3xHSIEISeXhK6GOK6LrNWV0FA3LiYrW7SWylMd0HaEmzgaHCnu3cKuEnv6DA+ZwahL1pPRaTXimHNwcjiwOcBVLm8QKxh9a2A9ug3l+d5asQ2tHHZVTO8L33DZGVKFZKTPTXrRTrlITK2xp21AXBFKRvkFi+vg5IK8sMMJd+bjA7Fn0BoEUB49YXxkDb9g40rA79CCMHaTyjeOwCSkMSHvVpouLCuD+kL60eJ8po4ifCLTk7Kycd0t8iS8RU/wuBy+Lcf7iGOTYqGoVqJu4jFeGUGZ3YZ08ar9bk4oOfNCPHH3HjXc7yjHzHVWVAymx4DWHtkmPByRFMe1L/y8f7TwZLPMd7lX5xe/ByVLGc8S/87EYjDYUDl1683fWy3/txFTy</source>
+  </file>
+  <package name="Default"/>
+  <package name="Sagres">
+    <package name="FileSystem"/>
+  </package>
+  <namespace name="Sagres">
+    <namespace name="Component">
+      <namespace name="FileSystem">
+        <namespace name="Exception"/>
+        <namespace name="Locator">
+          <namespace name="Node"/>
+        </namespace>
+      </namespace>
+    </namespace>
+  </namespace>
+  <marker>todo</marker>
+  <marker>fixme</marker>
+</project>

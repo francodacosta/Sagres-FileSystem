@@ -1,0 +1,117 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>DocBlox Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.tools.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><script xmlns="" type="text/javascript" src="js/sidebar.js"></script><div xmlns="" id="sidebar">
+<div id="sidebar-header">
+<img src="images/icon48x48.png" id="sidebar-logo" alt="Logo"><h1>DocBlox</h1>
+<div style="clear: both"></div>
+</div>
+<div id="sidebar-nav">
+<h3 id="sidebar-dashboard">
+<img class="icon" src="css/docblox/images/icons/dashboard.png" alt="Dashboard"><a href="content.html" class="link" target="content">Dashboard</a>
+</h3>
+<div style="display: none"></div>
+<h3 id="sidebar-files">
+<img src="css/docblox/images/icons/files.png" alt="Files"><a href="#files">Files</a>
+</h3>
+<div class="sidebar-section">
+<div class="search-bar">
+<a href="#" onclick="$(this).parent().next().find('.collapsable-hitarea').click(); return false;"><img src="images/collapse_all.png" title="Collapse all" alt="Collapse all"></a><a href="#" onclick="$(this).parent().next().find('.expandable-hitarea').click(); return false;"><img src="images/expand_all.png" title="Expand all" alt="Expand all"></a><div><input type="text" onkeyup="tree_search(this);"></div>
+</div>
+<ul class="sidebar-nav-tree">
+<li class="closed">
+<span class="file"><a href="db_Component_FileSystem_Exception_ResourceNotFoundException.html" target="content">Component/FileSystem/Exception/ResourceNotFoundException.php</a></span><ul id="files_b9f6acd97dfb5479c8895cfaded53e56" class="filetree"><li><span class="class"><a href="db_Component_FileSystem_Exception_ResourceNotFoundException.html#%5CSagres%5CComponent%5CFileSystem%5CException%5CResourceNotFoundException" target="content">ResourceNotFoundException<br></a></span></li></ul>
+</li>
+<li class="closed">
+<span class="file"><a href="db_Component_FileSystem_Locator.html" target="content">Component/FileSystem/Locator.php</a></span><ul id="files_ea9d6d4339337c1dab022fc3ce32bde0" class="filetree"><li><span class="class"><a href="db_Component_FileSystem_Locator.html#%5CSagres%5CComponent%5CFileSystem%5CLocator" target="content">Locator<br></a></span></li></ul>
+</li>
+<li class="closed">
+<span class="file"><a href="db_Component_FileSystem_Locator_Node_AbstractNode.html" target="content">Component/FileSystem/Locator/Node/AbstractNode.php</a></span><ul id="files_dd1e3491c1d7c5e3d832ed6a05cca9bb" class="filetree"><li><span class="class"><a href="db_Component_FileSystem_Locator_Node_AbstractNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CAbstractNode" target="content">AbstractNode<br></a></span></li></ul>
+</li>
+<li class="closed">
+<span class="file"><a href="db_Component_FileSystem_Locator_Node_FileNode.html" target="content">Component/FileSystem/Locator/Node/FileNode.php</a></span><ul id="files_eadffc1fbf9454ec02f9d7b5ba2b64cb" class="filetree"><li><span class="class"><a href="db_Component_FileSystem_Locator_Node_FileNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CFileNode" target="content">FileNode<br></a></span></li></ul>
+</li>
+<li class="closed">
+<span class="file"><a href="db_Component_FileSystem_Locator_Node_FolderNode.html" target="content">Component/FileSystem/Locator/Node/FolderNode.php</a></span><ul id="files_5c899fb71bf20d086f9484c63fadf763" class="filetree"><li><span class="class"><a href="db_Component_FileSystem_Locator_Node_FolderNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CFolderNode" target="content">FolderNode<br></a></span></li></ul>
+</li>
+<li class="closed">
+<span class="file"><a href="db_Component_FileSystem_Locator_Node_LinkNode.html" target="content">Component/FileSystem/Locator/Node/LinkNode.php</a></span><ul id="files_102d96cc7491e36dcc13736e0a290d0e" class="filetree"><li><span class="class"><a href="db_Component_FileSystem_Locator_Node_LinkNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CLinkNode" target="content">LinkNode<br></a></span></li></ul>
+</li>
+<li class="closed">
+<span class="file"><a href="db_Component_FileSystem_Locator_Node_NodeInterface.html" target="content">Component/FileSystem/Locator/Node/NodeInterface.php</a></span><ul id="files_02204c886ec38ce44a4780d439d2da68" class="filetree"><li><span class="interface"><a href="db_Component_FileSystem_Locator_Node_NodeInterface.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CNodeInterface" target="content">NodeInterface<br></a></span></li></ul>
+</li>
+</ul>
+</div>
+<h3 id="sidebar-packages">
+<img src="css/docblox/images/icons/packages.png" alt="Packages"><a href="#packages">Packages</a>
+</h3>
+<div class="sidebar-section sidebar-tree">
+<div class="search-bar">
+<a href="#" onclick="$(this).parent().next().find('.collapsable-hitarea').click(); return false;"><img src="images/collapse_all.png" title="Collapse all" alt="Collapse all"></a><a href="#" onclick="$(this).parent().next().find('.expandable-hitarea').click(); return false;"><img src="images/expand_all.png" title="Expand all" alt="Expand all"></a><div><input type="text" onkeyup="tree_search(this);"></div>
+</div>
+<ul class="sidebar-nav-tree"><li class="closed">
+<span class="folder">Sagres</span><ul><li class="closed">
+<span class="folder">FileSystem</span><ul><li><span class="class"><a href="db_Component_FileSystem_Locator.html#%5CSagres%5CComponent%5CFileSystem%5CLocator" target="content">Locator</a></span></li></ul>
+</li></ul>
+</li></ul>
+</div>
+<h3 id="sidebar-namespaces">
+<img src="css/docblox/images/icons/namespaces.png" alt="Namespaces"><a href="#namespaces">Namespaces</a>
+</h3>
+<div class="sidebar-section sidebar-tree">
+<div class="search-bar">
+<a href="#" onclick="$(this).parent().next().find('.collapsable-hitarea').click(); return false;"><img src="images/collapse_all.png" title="Collapse all" alt="Collapse all"></a><a href="#" onclick="$(this).parent().next().find('.expandable-hitarea').click(); return false;"><img src="images/expand_all.png" title="Expand all" alt="Expand all"></a><div><input type="text" onkeyup="tree_search(this);"></div>
+</div>
+<ul class="sidebar-nav-tree"><li class="closed">
+<span class="folder">Sagres</span><ul><li class="closed">
+<span class="folder">Component</span><ul><li class="closed">
+<span class="folder">FileSystem</span><ul>
+<li class="closed">
+<span class="folder">Exception</span><ul><li><span class="class"><a href="db_Component_FileSystem_Exception_ResourceNotFoundException.html#%5CSagres%5CComponent%5CFileSystem%5CException%5CResourceNotFoundException" target="content">ResourceNotFoundException</a></span></li></ul>
+</li>
+<li class="closed">
+<span class="folder">Locator</span><ul><li class="closed">
+<span class="folder">Node</span><ul>
+<li><span class="class"><a href="db_Component_FileSystem_Locator_Node_AbstractNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CAbstractNode" target="content">AbstractNode</a></span></li>
+<li><span class="class"><a href="db_Component_FileSystem_Locator_Node_FileNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CFileNode" target="content">FileNode</a></span></li>
+<li><span class="class"><a href="db_Component_FileSystem_Locator_Node_FolderNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CFolderNode" target="content">FolderNode</a></span></li>
+<li><span class="class"><a href="db_Component_FileSystem_Locator_Node_LinkNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CLinkNode" target="content">LinkNode</a></span></li>
+<li><span class="interface"><a href="db_Component_FileSystem_Locator_Node_NodeInterface.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CNodeInterface" target="content">NodeInterface</a></span></li>
+</ul>
+</li></ul>
+</li>
+<li><span class="class"><a href="db_Component_FileSystem_Locator.html#%5CSagres%5CComponent%5CFileSystem%5CLocator" target="content">Locator</a></span></li>
+</ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</div>
+<h3 id="sidebar-charts">
+<img src="css/docblox/images/icons/chart.png" alt="Charts"><a href="#charts">Charts</a>
+</h3>
+<div class="sidebar-section"><ul style="list-style-image: url('css/docblox/images/icons/chart15x12.png');"><li><a href="graph.html" target="content">Class Inheritance Diagram</a></li></ul></div>
+<h3 id="sidebar-reports">
+<img src="css/docblox/images/icons/reports.png" alt="Reports"><a href="#reports">Reports</a>
+</h3>
+<div class="sidebar-section"><ul style="list-style-image: url('css/docblox/images/icons/reports9x12.png');">
+<li><a href="report_markers.html" target="content">Markers (TODO/FIXME)</a></li>
+<li><a href="report_parse_markers.html" target="content">Parsing errors</a></li>
+<li><a href="report_deprecated.html" target="content">Deprecated elements</a></li>
+</ul></div>
+</div>
+<div id="sidebar-footer">
+        Documentation is generated by <a href="http://docblox-project.org" target="_top"><img src="images/icon48x48.png" height="12" align="top" alt="Logo"> DocBlox 0.18.1</a>, images courtesy of <a href="http://glyphish.com/" target="_top">Glyphish</a>
+</div>
+</div></body></html>

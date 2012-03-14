@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+namespace Sagres\Component\FileSystem\Locator\Node;
+
+abstract class AbstractNode implements NodeInterface
+{
+    const TYPE_FOLDER = 0;
+    const TYPE_FILE = 1;
+    const TYPE_LINK = 2;
+
+    private $name = null;
+    private $path = null;
+    private $type = null;
+
+    private $readable = false;
+    private $writable = false;
+    private $exists = false;
+
+    public function __construct($path)
+    {
+        $this-&gt;processPath($path);
+    }
+
+    /**
+     * processes the path and populates this class with all falues
+     * @param unknown_type $path
+     */
+    protected function processPath($path)
+    {
+        $this-&gt;name = basename($path);
+        $this-&gt;path = $path;
+        $this-&gt;exists = file_exists($path);
+        $this-&gt;readable = is_readable($path);
+        $this-&gt;writable = is_writable($path);
+
+    }
+
+    public function isReadable()
+    {
+        return $this-&gt;readable;
+    }
+    public function isWritable()
+    {
+        return $this-&gt;writable;
+    }
+    public function exists()
+    {
+        return $this-&gt;exists;
+    }
+
+    public function getName()
+    {
+        return $this-&gt;name;
+    }
+    public function getPath()
+    {
+        return $this-&gt;path;
+    }
+
+    public function getType()
+    {
+        return $this-&gt;type;
+    }
+
+    protected function setType($type)
+    {
+        $this-&gt;type = $type;
+    }
+
+    public function __toString()
+    {
+        return $this-&gt;getPath();
+    }
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all()
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>
