@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="true"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         forceCoversAnnotation="false"
+         mapTestClassNameToCoveredClassName="false"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         syntaxCheck="true"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+         strict="false"
+         verbose="true"
+         bootstrap="bootstrap.php"
+         >
+    <testsuites>
+        <testsuite name="Sagres">
+            <directory>.</directory>
+        </testsuite>
+    </testsuites>
+    
+    <filter>
+        <blacklist>
+            <!-- interfaces -->
+            <file>../Sagres/Component/FileSystem/Locator/Node/NodeInterface.php</file>
+            
+
+            <!-- File Exceptions-->
+            <directory suffix=".php">./../Sagres/Component/FileSystem/Exception</directory>
+            
+            <!-- vendors -->
+            <directory suffix=".php">../vendors</directory>
+        </blacklist>
+    </filter>
+</phpunit>
