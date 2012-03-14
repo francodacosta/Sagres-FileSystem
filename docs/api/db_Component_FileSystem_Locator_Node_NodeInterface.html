@@ -92,23 +92,53 @@
               Table of Contents
           </div>
 </div>
-<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><a name="interfaces" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="interface">\Sagres\Component\FileSystem\Locator\Node\NodeInterface<div class="to-top"><a href="#top">jump to top</a></div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">This file is part of the Sagres package.</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>(c) nuno costa <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m">&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m</a></p>
+
+<p>For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.</p></div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Sagres
+         
+    </dd>
+</dl>
+<a name="interfaces" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="interface">\Sagres\Component\FileSystem\Locator\Node\NodeInterface<div class="to-top"><a href="#top">jump to top</a></div>
 </h2>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
-<small class="package"><b>Package: </b></small><dl class="class-info">
+<small class="package"><b>Package: </b>Sagres\FileSystem</small><p class="short-description">Interface for all nodes</p>
+<div class="long-description"></div>
+<dl class="class-info">
 <dt>Children</dt>
 <dd><a href="db_Component_FileSystem_Locator_Node_AbstractNode.html#%5CSagres%5CComponent%5CFileSystem%5CLocator%5CNode%5CAbstractNode">\Sagres\Component\FileSystem\Locator\Node\AbstractNode</a></dd>
+<dt>Author</dt>
+<dd>
+<a href="mailto:nuno@francodacosta.com">nuno costa</a>
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://opensource.org/licenses/MIT">MIT</a>
+         
+    </dd>
+<dt>Since</dt>
+<dd>10-11-2011
+         
+    </dd>
 </dl>
 <h3>Methods</h3>
 <div>
 <a id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface::__construct()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
-           $path
+          String $path
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description"></p></div>
+          void</code><div class="description"><p class="short_description">(NON PHP DOC)</p></div>
 <div class="code-tabs">
+<div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
 <thead><tr>
 <th>Name</th>
@@ -117,7 +147,7 @@
 </tr></thead>
 <tr>
 <th>$path</th>
-<td></td>
+<td>String</td>
 <td><em></em></td>
 </tr>
 </table>
@@ -130,8 +160,20 @@
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description"></p></div>
-<div class="code-tabs"></div>
+          boolean</code><div class="description"><p class="short_description">resource is found</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td>true if it is available for us</td>
+</tr>
+</table>
+</div>
 <div class="clear"></div>
 </div>
 <a id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface::getName()" class="anchor"></a><div class="method public">
@@ -140,8 +182,20 @@
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description"></p></div>
-<div class="code-tabs"></div>
+          String</code><div class="description"><p class="short_description">gets the resource name</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>String</td>
+<td></td>
+</tr>
+</table>
+</div>
 <div class="clear"></div>
 </div>
 <a id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface::getPath()" class="anchor"></a><div class="method public">
@@ -150,8 +204,20 @@
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description"></p></div>
-<div class="code-tabs"></div>
+          String</code><div class="description"><p class="short_description">The resource full path</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>String</td>
+<td></td>
+</tr>
+</table>
+</div>
 <div class="clear"></div>
 </div>
 <a id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface::getType()" class="anchor"></a><div class="method public">
@@ -160,8 +226,20 @@
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description"></p></div>
-<div class="code-tabs"></div>
+          Integer</code><div class="description"><p class="short_description">the resource type</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>See the TYPE_ constants for a list of supported types</p></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>Integer</td>
+<td></td>
+</tr>
+</table>
+</div>
 <div class="clear"></div>
 </div>
 <a id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface::isReadable()" class="anchor"></a><div class="method public">
@@ -170,8 +248,20 @@
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description"></p></div>
-<div class="code-tabs"></div>
+          boolean</code><div class="description"><p class="short_description">Can we read the file ?</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td>true if we can read it</td>
+</tr>
+</table>
+</div>
 <div class="clear"></div>
 </div>
 <a id="\Sagres\Component\FileSystem\Locator\Node\NodeInterface::isWritable()" class="anchor"></a><div class="method public">
@@ -180,8 +270,20 @@
           )
         </span>
         :
-          void</code><div class="description"><p class="short_description"></p></div>
-<div class="code-tabs"></div>
+          boolean</code><div class="description"><p class="short_description">Can we write to the file ?</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td>true if we can</td>
+</tr>
+</table>
+</div>
 <div class="clear"></div>
 </div>
 </div>
