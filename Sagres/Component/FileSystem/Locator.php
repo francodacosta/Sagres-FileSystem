@@ -139,20 +139,29 @@ class Locator
      */
     private function resolveNode($node)
     {
-        $ret = null;
-        if (is_dir($node)) {
-            $ret = new FolderNode($node);
-        }
-        if (is_file($node)) {
-            $ret = new FileNode($node);
+
+        try {
+            $type = filetype($node) ;
+        } catch (\Exception $e) {
+            throw new ResourceNotFoundException($node . ' was not found : ' . $e->getMessage());
         }
 
-        if (is_link($node)) {
-            $ret = new LinkNode($node);
-        }
+        switch($type) {
+            case 'link':
+                $ret = new LinkNode($node);
+                break;
 
-        if (is_null($ret)) {
-            throw new \UnexpectedValueException('Can not resolve node for path ' . $node);
+            case 'dir':
+                $ret = new FolderNode($node);
+                break;
+
+            case 'file':
+                $ret = new FileNode($node);
+                break;
+
+            default:
+                throw new \UnexpectedValueException($node . ' Unsupported file type ' . $type);
+                break;
         }
 
         return $ret;

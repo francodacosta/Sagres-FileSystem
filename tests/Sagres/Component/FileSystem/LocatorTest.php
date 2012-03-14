@@ -99,15 +99,12 @@ class LocatorTest extends \PHPUnit_Framework_TestCase
      * @covers Sagres\Component\FileSystem\Locator::resolveNode
      * @covers Sagres\Component\FileSystem\Locator::addNode
      *
-     * @expectedException \UnexpectedValueException
+     * @expectedException Sagres\Component\FileSystem\Exception\ResourceNotFoundException
      */
     public function testAddSingle_not_found()
     {
         $file = $this->getFixturesPath('not.found');
         $this->object->addSingle($file);
-
-        $files = $this->object->getFiles();
-        $folders = $this->object->getFolders();
 
     }
 
@@ -120,6 +117,14 @@ class LocatorTest extends \PHPUnit_Framework_TestCase
        $this->object->addNode(new FakeNode(''));
     }
 
+    /**
+     * @covers Sagres\Component\FileSystem\Locator::resolveNode
+     * @expectedException UnexpectedValueException
+     */
+    public function testAddNode_invalid_file()
+    {
+        $this->object->addSingle('/dev/sda');
+    }
     /**
      * @covers Sagres\Component\FileSystem\Locator::add
      * @todo Implement testAdd().
