@@ -13,10 +13,7 @@
 namespace Sagres\Component\FileSystem;
 
 use Sagres\Component\FileSystem\Exception\ResourceNotFoundException;
-use Sagres\Component\FileSystem\Locator\Node\FolderNode;
-use Sagres\Component\FileSystem\Locator\Node\FileNode;
-use Sagres\Component\FileSystem\Locator\Node\LinkNode;
-use Sagres\Component\FileSystem\Locator\Node\AbstractNode;
+use Sagres\Component\FileSystem\Locator\Node\Node;
 
 /**
  * The Locator class makes it easy to locate/specify files or folders in the
@@ -56,24 +53,16 @@ class Locator
 
     /**
      * ads a filesystem node abstraction to the current set
-     * @param AbstractNode $node
+     * @param Node $node
      * @throws \UnexpectedValueException
      */
-    public function addNode(AbstractNode $node)
+    public function addNode(Node $node)
     {
-        switch ($node->getType()) {
-            case $node::TYPE_LINK:
-            case $node::TYPE_FILE:
-                $this->files[] = $node;
-                break;
 
-            case $node::TYPE_FOLDER:
-                $this->folders[] = $node;
-                break;
-
-            default:
-                throw new \UnexpectedValueException('Can not process nodes of type ' . $node->getType());
-                break;
+        if ($node->isDir()) {
+            $this->folders[] = $node;
+        } else {
+            $this->files[] = $node;
         }
     }
 
@@ -95,13 +84,15 @@ class Locator
             throw new ResourceNotFoundException($path . ' not found');
         }
 
-        $path = new FolderNode($path);
+        $path = new Node($path);
         $this->addNode($path);
-
 
         if ($dh = opendir($path)) {
             while (($filename = readdir($dh)) !== false) {
-                $file = $path . $filename;
+                if (in_array($filename, array('.','..'))) {
+                    continue;
+                }
+                $file = $path . DIRECTORY_SEPARATOR . $filename;
                 if(!is_dir($file)) {
                     if (preg_match( $filter, $filename) > 0) {
                         $this->addSingle($file);
@@ -133,43 +124,27 @@ class Locator
     /**
      * resolves a path into a node object
      *
-     * @param unknown_type $node
+     * @param String $node
      * @throws UnexpectedValueException
-     * @return \Sagres\Component\FileSystem\Locator\Node\AbstractNode
+     * @return \Sagres\Component\FileSystem\Locator\Node\Node
      */
-    private function resolveNode($node)
+    public function resolveNode($path)
     {
 
-        try {
-            $type = filetype($node) ;
-        } catch (\Exception $e) {
-            throw new ResourceNotFoundException($node . ' was not found : ' . $e->getMessage());
-        }
+//         try {
+//             $type = filetype($path) ;
+//         } catch (\Exception $e) {
+//             throw new ResourceNotFoundException($path . ' was not found : ' . $e->getMessage());
+//         }
 
-        switch($type) {
-            case 'link':
-                $ret = new LinkNode($node);
-                break;
+        return new Node($path);
 
-            case 'dir':
-                $ret = new FolderNode($node);
-                break;
-
-            case 'file':
-                $ret = new FileNode($node);
-                break;
-
-            default:
-                throw new \UnexpectedValueException($node . ' Unsupported file type ' . $type);
-                break;
-        }
-
-        return $ret;
+//         return $ret;
     }
 
     /**
      * get all files nodes
-     * @return Array of AbstractNode Implementation (FileNode and LinkNode)
+     * @return Array of Node Implementation (FileNode and LinkNode)
      */
     public function getFiles()
     {
@@ -179,7 +154,7 @@ class Locator
     /**
      * get all folder nodes
      *
-     * @return Array of AbstractNode Implementation (FolderNode)
+     * @return Array of Node Implementation (FolderNode)
      */
     public function getFolders()
     {
@@ -188,7 +163,7 @@ class Locator
 
     /**
      * return all nodes (file and folder)
-     * @return Array of AbstractNode Implementation (FileNode, LinkNode and FolderNode)
+     * @return Array of Node Implementation (FileNode, LinkNode and FolderNode)
      */
     public function get()
     {

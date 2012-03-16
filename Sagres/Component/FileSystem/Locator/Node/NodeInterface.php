@@ -72,4 +72,22 @@ Interface NodeInterface
      * @return Integer
      */
     public function getType();
+
+    /**
+     * returns true if the resource is a folder
+     * @return boolean
+     */
+    public function isFolder();
+
+    /**
+     * returns true if the resource is a file
+     * @return boolean
+     */
+    public function isFile();
+
+    /**
+     * returns true if the resource is a link
+     * @return boolean
+     */
+    public function isLink();
 }

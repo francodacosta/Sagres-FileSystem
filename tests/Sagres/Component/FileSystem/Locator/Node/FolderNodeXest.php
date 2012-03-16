@@ -46,5 +46,18 @@ class FolderNodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($o::TYPE_FOLDER, $o->getType());
         $this->assertEquals($path, $o->getPath());
     }
+
+    /**
+     * @covers Sagres\Component\FileSystem\Locator\Node\AbstractNode::isFolder
+     */
+    public function test_isFolder()
+    {
+        $path = $this->getFixturesPath('');
+        $o = new FolderNode(substr($path, 0, strlen($path)-1));
+
+        $this->assertFalse($o->isFile());
+        $this->assertTrue($o->isFolder());
+        $this->assertFalse($o->isLink());
+    }
 }
 ?>

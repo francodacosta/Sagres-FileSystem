@@ -35,7 +35,6 @@ class LinkNodeTest extends \PHPUnit_Framework_TestCase
         return __DIR__ . '/../../../../../fixtures/' . $path;
     }
 
-
     /**
      * @covers Sagres\Component\FileSystem\Locator\Node\LinkNode::getType
      * @covers Sagres\Component\FileSystem\Locator\Node\LinkNode::setType
@@ -46,6 +45,19 @@ class LinkNodeTest extends \PHPUnit_Framework_TestCase
         $path = $this->getFixturesPath('linked.file');
         $o = new LinkNode($path);
         $this->assertEquals($o::TYPE_LINK, $o->getType());
+    }
+
+    /**
+     * @covers Sagres\Component\FileSystem\Locator\Node\AbstractNode::isLink
+     */
+    public function test__isLink()
+    {
+        $path = $this->getFixturesPath('linked.file');
+        $o = new LinkNode($path);
+
+        $this->assertFalse($o->isFile());
+        $this->assertFalse($o->isFolder());
+        $this->assertTrue($o->isLink());
     }
 }
 ?>
