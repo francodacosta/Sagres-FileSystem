@@ -226,7 +226,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     public function testGetOwnerUsername()
     {
        if (!function_exists('posix_getpwuid')) {
-           $this->markTestIncomplete('posix extension not installed');
+           $this->markTestSkipped('posix extension not installed');
        }
 
         $this->assertNotNull($this->object->getOwnerUsername());
@@ -238,7 +238,7 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     public function testGetGroupName()
     {
         if (!function_exists('posix_getgrgid')) {
-            $this->markTestIncomplete('posix extension not installed');
+            $this->markTestSkipped('posix extension not installed');
         }
         $this->assertNotNull($this->object->getGroupName());
     }
