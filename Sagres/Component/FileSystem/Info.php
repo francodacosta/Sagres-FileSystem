@@ -305,7 +305,9 @@ class Info
             $info = @posix_getpwuid($this->getUid());
             return $info['name'];
         } else {
+            // @codeCoverageIgnoreStart
             throw new \RuntimeException('posix extension not installed');
+            // @codeCoverageIgnoreEnd
         }
     }
 
@@ -319,7 +321,9 @@ class Info
              $info = @posix_getgrgid($this->getGid());
              return $info['name'];
         }else {
+            // @codeCoverageIgnoreStart
             throw new \RuntimeException('posix extension not installed');
+            // @codeCoverageIgnoreEnd
         }
     }
 
