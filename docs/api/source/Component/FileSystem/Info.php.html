@@ -1,8 +1,44 @@
-<?php
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
 /**
  * This file is part of the Sagres package.
  *
- * (c) nuno costa <nuno@francodacosta.com>
+ * (c) nuno costa &lt;nuno@francodacosta.com&gt;
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -22,7 +58,7 @@ use Sagres\Component\FileSystem\Locator\Node\AbstractNode;
  * @package Sagres
  * @subpackage FileSystem
  *
- * @author nuno costa <nuno@francodacosta.com>
+ * @author nuno costa &lt;nuno@francodacosta.com&gt;
  * @since 10-11-2011
  * @license MIT
  */
@@ -127,8 +163,8 @@ class Info
      */
     public function __construct(AbstractNode $node)
     {
-        $this->node = $node;
-        $this->populate();
+        $this-&gt;node = $node;
+        $this-&gt;populate();
     }
 
     /**
@@ -138,7 +174,7 @@ class Info
 
     public function getNode()
     {
-        return $this->node;
+        return $this-&gt;node;
     }
 
     /**
@@ -150,8 +186,8 @@ class Info
 
     private function populate()
     {
-        $node = $this->getNode();
-        if(! $node->exists()) {
+        $node = $this-&gt;getNode();
+        if(! $node-&gt;exists()) {
             throw new ResourceNotFoundException('Can not stat an non existent resource ' . $node);
         }
 
@@ -162,19 +198,19 @@ class Info
             $stat = stat($node);
         }
 
-        $this->deviceNumber = $stat['dev'];
-        $this->inodeNumber = $stat['ino'];
-        $this->inodeMode = $stat['mode'];
-        $this->numberOfLinks = $stat['nlink'];
-        $this->uid = $stat['uid'];
-        $this->gid = $stat['gid'];
-        $this->deviceType = $stat['rdev'];
-        $this->size = $stat['size'];
-        $this->accessTime = $stat['atime'];
-        $this->modificationTime = $stat['mtime'];
-        $this->lastInodeChangeTime = $stat['ctime'];
-        $this->blockSize = $stat['blksize'];
-        $this->blocksAllocated = $stat['blocks'];
+        $this-&gt;deviceNumber = $stat['dev'];
+        $this-&gt;inodeNumber = $stat['ino'];
+        $this-&gt;inodeMode = $stat['mode'];
+        $this-&gt;numberOfLinks = $stat['nlink'];
+        $this-&gt;uid = $stat['uid'];
+        $this-&gt;gid = $stat['gid'];
+        $this-&gt;deviceType = $stat['rdev'];
+        $this-&gt;size = $stat['size'];
+        $this-&gt;accessTime = $stat['atime'];
+        $this-&gt;modificationTime = $stat['mtime'];
+        $this-&gt;lastInodeChangeTime = $stat['ctime'];
+        $this-&gt;blockSize = $stat['blksize'];
+        $this-&gt;blocksAllocated = $stat['blocks'];
         clearstatcache();
     }
 
@@ -183,7 +219,7 @@ class Info
      */
     public function getDeviceNumber()
     {
-        return $this->deviceNumber;
+        return $this-&gt;deviceNumber;
     }
 
     /**
@@ -192,7 +228,7 @@ class Info
      */
     public function getInodeNumber()
     {
-        return $this->inodeNumber;
+        return $this-&gt;inodeNumber;
     }
 
     /**
@@ -200,7 +236,7 @@ class Info
      */
     public function getInodeMode()
     {
-        return $this->inodeMode;
+        return $this-&gt;inodeMode;
     }
 
     /**
@@ -208,7 +244,7 @@ class Info
      */
     public function getNumberOfLinks()
     {
-        return $this->numberOfLinks;
+        return $this-&gt;numberOfLinks;
     }
 
     /**
@@ -217,7 +253,7 @@ class Info
      */
     public function getUid()
     {
-        return $this->uid;
+        return $this-&gt;uid;
     }
 
     /**
@@ -226,7 +262,7 @@ class Info
      */
     public function getGid()
     {
-        return $this->gid;
+        return $this-&gt;gid;
     }
 
     /**
@@ -234,7 +270,7 @@ class Info
      */
     public function getDeviceType()
     {
-        return $this->deviceType;
+        return $this-&gt;deviceType;
     }
 
     /**
@@ -250,7 +286,7 @@ class Info
      */
     public function getSize($conversion =1)
     {
-        return $this->size / $conversion;
+        return $this-&gt;size / $conversion;
     }
 
     /**
@@ -258,7 +294,7 @@ class Info
      */
     public function getAccessTime()
     {
-        return $this->accessTime;
+        return $this-&gt;accessTime;
     }
 
     /**
@@ -266,7 +302,7 @@ class Info
      */
     public function getModificationTime()
     {
-        return $this->modificationTime;
+        return $this-&gt;modificationTime;
     }
 
     /**
@@ -274,7 +310,7 @@ class Info
      */
     public function getLastInodeChangeTime()
     {
-        return $this->lastInodeChangeTime;
+        return $this-&gt;lastInodeChangeTime;
     }
 
     /**
@@ -283,7 +319,7 @@ class Info
      */
     public function getBlockSize()
     {
-        return $this->blockSize;
+        return $this-&gt;blockSize;
     }
 
     /**
@@ -292,7 +328,7 @@ class Info
      */
     public function getBlocksAllocated()
     {
-        return $this->blocksAllocated;
+        return $this-&gt;blocksAllocated;
     }
 
     /**
@@ -302,7 +338,7 @@ class Info
     public function getOwnerUsername()
     {
        if (function_exists('posix_getpwuid')) {
-            $info = @posix_getpwuid($this->getUid());
+            $info = @posix_getpwuid($this-&gt;getUid());
             return $info['name'];
         } else {
             throw new \RuntimeException('posix extension not installed');
@@ -316,7 +352,7 @@ class Info
     public function getGroupName()
     {
         if (function_exists('posix_getgrgid')) {
-             $info = @posix_getgrgid($this->getGid());
+             $info = @posix_getgrgid($this-&gt;getGid());
              return $info['name'];
         }else {
             throw new \RuntimeException('posix extension not installed');
@@ -329,7 +365,7 @@ class Info
      * @return String
      */
     public function getOctalPermissions(){
-       return substr(sprintf('%o', fileperms($this->getNode())), -4);
+       return substr(sprintf('%o', fileperms($this-&gt;getNode())), -4);
     }
 
     /**
@@ -338,28 +374,28 @@ class Info
      */
     public function getHumanReadablePermissions()
     {
-        $perms = fileperms($this->getNode());
+        $perms = fileperms($this-&gt;getNode());
 
         // @codeCoverageIgnoreStart
-        if (($perms & 0xC000) == 0xC000) {
+        if (($perms &amp; 0xC000) == 0xC000) {
             // Socket
             $info = 's';
-        } elseif (($perms & 0xA000) == 0xA000) {
+        } elseif (($perms &amp; 0xA000) == 0xA000) {
             // Symbolic Link
             $info = 'l';
-        } elseif (($perms & 0x8000) == 0x8000) {
+        } elseif (($perms &amp; 0x8000) == 0x8000) {
             // Regular
             $info = '-';
-        } elseif (($perms & 0x6000) == 0x6000) {
+        } elseif (($perms &amp; 0x6000) == 0x6000) {
             // Block special
             $info = 'b';
-        } elseif (($perms & 0x4000) == 0x4000) {
+        } elseif (($perms &amp; 0x4000) == 0x4000) {
             // Directory
             $info = 'd';
-        } elseif (($perms & 0x2000) == 0x2000) {
+        } elseif (($perms &amp; 0x2000) == 0x2000) {
             // Character special
             $info = 'c';
-        } elseif (($perms & 0x1000) == 0x1000) {
+        } elseif (($perms &amp; 0x1000) == 0x1000) {
             // FIFO pipe
             $info = 'p';
         } else {
@@ -369,25 +405,25 @@ class Info
         // @codeCoverageIgnoreEnd
 
         // Owner
-        $info .= (($perms & 0x0100) ? 'r' : '-');
-        $info .= (($perms & 0x0080) ? 'w' : '-');
-        $info .= (($perms & 0x0040) ?
-                (($perms & 0x0800) ? 's' : 'x' ) :
-                (($perms & 0x0800) ? 'S' : '-'));
+        $info .= (($perms &amp; 0x0100) ? 'r' : '-');
+        $info .= (($perms &amp; 0x0080) ? 'w' : '-');
+        $info .= (($perms &amp; 0x0040) ?
+                (($perms &amp; 0x0800) ? 's' : 'x' ) :
+                (($perms &amp; 0x0800) ? 'S' : '-'));
 
         // Group
-        $info .= (($perms & 0x0020) ? 'r' : '-');
-        $info .= (($perms & 0x0010) ? 'w' : '-');
-        $info .= (($perms & 0x0008) ?
-                (($perms & 0x0400) ? 's' : 'x' ) :
-                (($perms & 0x0400) ? 'S' : '-'));
+        $info .= (($perms &amp; 0x0020) ? 'r' : '-');
+        $info .= (($perms &amp; 0x0010) ? 'w' : '-');
+        $info .= (($perms &amp; 0x0008) ?
+                (($perms &amp; 0x0400) ? 's' : 'x' ) :
+                (($perms &amp; 0x0400) ? 'S' : '-'));
 
         // World
-        $info .= (($perms & 0x0004) ? 'r' : '-');
-        $info .= (($perms & 0x0002) ? 'w' : '-');
-        $info .= (($perms & 0x0001) ?
-                (($perms & 0x0200) ? 't' : 'x' ) :
-                (($perms & 0x0200) ? 'T' : '-'));
+        $info .= (($perms &amp; 0x0004) ? 'r' : '-');
+        $info .= (($perms &amp; 0x0002) ? 'w' : '-');
+        $info .= (($perms &amp; 0x0001) ?
+                (($perms &amp; 0x0200) ? 't' : 'x' ) :
+                (($perms &amp; 0x0200) ? 'T' : '-'));
 
         return $info;
     }
@@ -405,11 +441,11 @@ class Info
     {
         switch($format) {
             case self::PERMISSION_HUMAN:
-                return $this->getHumanReadablePermissions();
+                return $this-&gt;getHumanReadablePermissions();
                 break;
 
             case self::PERMISSION_NUMBER:
-                return $this->getOctalPermissions();
+                return $this-&gt;getOctalPermissions();
                 break;
 
             default:
@@ -419,3 +455,12 @@ class Info
     }
 
 }
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all()
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

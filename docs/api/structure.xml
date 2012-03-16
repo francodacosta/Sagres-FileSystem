@@ -91,7 +91,7 @@ file that was distributed with this source code.</p>]]></long-description>
     </class>
     <source>eJyNUtFu2jAUfc9X3El9IKhA2WNoOxgNEhJrEfBSCQkZ54ZYS+zIdtahin/ftUOAbd1EXhwdH59z77n3/kuZlUGv3Q6gDatMGEhFjkBnybQFlYLNEJZsp9FB/DvbYZe4jt7iIchKKuDKWAb37n+Yaia5SpjHulwVj0f2RGmvlVZ5Ti/KvRa7zAKTCeSCozTkKlOlC2aFkrdQ5sgI+yHwzb+bTcfx8zJ2Ur5EmzELb8xAIozVYltZTOBN2IxuqHyjKs2RjJJTvcNj/cd2COoFkhVoCG/A9VgVpZIo7XpCLsu9sVisZ4ozq/T6mdQGQRPXV1cfz5mh0Kg5Rn1JIph/2sHQVNsGPcs3fFbZjHSui5S0hKSy+3edfr/z+a7f92AT5bfpyvdXlzdReYLaVQ/406JMDIy2lBrj1oHBewD0+bbc14b3oZAZamETxQ8NSA1pVsCS0pY7uCmZzY5XPX+W1ZbsacCSuxHCZsOVJJeK25Znh55Wm7nvxk2q82jQrvYltgzmaRStXufxZvIye4oX4eBEJWuaSRT9rVlzDsE1LTR3bp+epot4vHpZvG6W8Xy0GNGvW3tWlpQPrZJVnuY8QKQ0WdrVXCNL9g7X+Ifk0OD1O9S9TD+KdmjnZNMK/xvn76yLFH2JD6eITrxBcOKItPVRv58egDaSSqmzvIVOPwwvpC/l67P7UW7nMR3OlhptpWX9rJnR4RegiVaN</source>
   </file>
-  <file path="Component/FileSystem/Locator/Node/AbstractNode.php" hash="ba4be5e0d7e595913c189e52a3d810b7" package="Sagres">
+  <file path="Component/FileSystem/Locator/Node/AbstractNode.php" hash="510e512104bb608be59296c02a68786a" package="Sagres">
     <docblock line="2">
       <description><![CDATA[This file is part of the Sagres package.]]></description>
       <long-description><![CDATA[<p>(c) nuno costa <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m">&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m</a></p>
@@ -306,10 +306,19 @@ file that was distributed with this source code.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="170" package="Default">
+        <name>getRealPath</name>
+        <type>function</type>
+        <docblock line="166">
+          <description><![CDATA[(non-PHPdoc)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="166" name="see" description="\Sagres\Component\FileSystem\Locator\Node.NodeInterface::getRealPath()" refers="\Sagres\Component\FileSystem\Locator\Node.NodeInterface::getRealPath()"/>
+        </docblock>
+      </method>
     </class>
-    <source>eJy9V11v2jAUfedX+IGHFq0f9LHtOraOSmiMVgVpmoSEjGOI1cSObAdWVf3vu3bsEAgG+lDyArZPjs+5vr52br9lcda4aLUaqIVGMVNoxhKK4DfDUiMxQzqmaIjnkpou8oLn9BywBn5CThHPuUBEKI3RrfnfmUnMiYiw7TsnIr1z6AchLdcsTxJ4I3uVbB5rhHmEEkYoVzArnwmZYs0E/4KyhGLoWzC6tO/1e/fdwbBrqKxEHWONllihiCkt2TTXNEJLpmMYAflK5JJQmCgq9XacfmcHui4aHKdUQb/vHN+LNBOccj1+gFmGr0rTdNwXBGshxwNgu2n4cP0w+kiCFQQNzGHwxQGggtOhjsqnvndF7/E41zHwHBZS4GIcZLcvz9rts6vLdtt2+lD+7o2sPzyF4GCinc7vrmmMIJZCjFOwqpBp97imcgahaLw1EDxEcKXR6O9Td/Lw2P/ZfUZf0eVNbajX78JAuzbQ7w1+wcAVxMuM2JiZp4UgGMXimOD7zs4CSzSEheRz13VhfzPJFlhT1DRg4OOQPjdBRptcGdbxwbQGXNIGefVrtq7UBGtO5XZOgw5yQm6WtJLiCE+TdeqpEJD6fDu1fwPoZzhRdDf/UjL9MX7/xmH8eIFZYuFaoFx9YB76D3atCs+SiSxPAKns3i+S125uSRO6wBB9tMBJTu3WSy3IrmQmxYJFNCqVQBnDKcr5CxdLPrEr06wkiJOVT2HjQPZwYooPmkxsIsuc6BOLPrWwYl+Yp2lqzNkdzEaoUk+AcLgiNd/rfgqk82OlmspXtQmBrfg01aRw+EErUmhKTC0s3dRVbnfjdtgUypr5u+aoarrYMXa0NrhaVyhvk6IVIqrkMlMT3wqhK5kJaN8q0YG4v3UYjymAI0Hey0gqeni9P1+rjdfXTD17pac7k6gGXAVcUp1LvhmHUO58hoc/Pn77PGwAQx78ehzPg8ut3frXQCHtBeh4yudUD8z+2i19HRXSbjbqUZXbKrJXeQUVUr4qH0dSPoKCuV95BRVSbipvSPmQ6qLEb7s6fIqTjePBXUyKS8i+k0E5LgsOnAruMtNcc12zbW9YYDoDT2DG3uH914MPxYZgxt2hZ67RTJuLRfl9UDnWSn9uEbZd5mrHtxYFbM9Klpnqjb3/B10O4Zc=</source>
+    <source>eJy9V11v2jAUfedX+KEPBa0f9HHtOraOamiMVQVpmoSEjGOI1cSObAdWVf3vu3bsEAgGKq3wArFPjs+5vvfa3HzO4qxx0Wo1UAuNYqbQjCUUwXeGpUZihnRM0RDPJTVD5AnP6TlgDfyUNBHPuUBEKI3RjfndmUnMiYiwHTsnIr116HshLdcsTxJ4I3uWbB5rhHmEEkYoV7AqnwmZYs0E/4CyhGIYWzC6tO/1e3fdwbBrqKxEHWONllihiCkt2TTXNEJLpmOYAflK5JJQWCgq9XacfmcHhi4aHKdUwbgfHN+JNBOccj2+h1WGz0rTdNwXBGshxwNgu274cH01+kiCFQQNzGHwxQGggsuhjsqnfnRF7/E41zHwHBZS4GIcZLcvz9rts6vLdtsO+lD+7I2sPzyF4GCinc4v7tEYQSyFGKdgVSHz3OOayhmEovHSQPAhgiuNRn8eupP7X/1v3Uf0CV1e16Z6/S5MtGsT/d7gB0xcQbzMjI2Z+bQQBKPYHBN8P9hZYImGsJF87oYu7Hcm2QJrik4MGPg4pM91kNEmV4Z1fDCtAZe0QV79nK0rNcGaU7md06CDnJCbJa2kOMLTZJ16KgSkPt9O7d8A+hlOFN3Nv5RMv43fv3EYP15glli4FihXb1iH/oWqVeFVMpHlCSCVrf0ieW1xS5rQBYboowVOcmpLL7Ugu5OZFAsW0ahUAm0MpyjnT1ws+cTuzEklQZysfAqFA9nDiWk+aDKxiSxzok8tumlhRV2Yz4npMWe3sBqhSj0AwuGK1Hyt+ymQzo+Vajpf1SYEtuLTdJPC4RutSKEpMb2wdFNXud2Nq7AptDXzc81R1XRRMXa2NrnaV2hvk+IpRFTJZaYm/imErmQmoP1TiQ7E/aXDeEwBHAnyWkZS0cP7/flab/z4kalHr7S5M4lqwFXAJdW55JtxCOXOe3j47eO3z8MGMOTB78fxPLjc2q1/DRTSXoCOp3xO9cDU127p66iQdlOoR1Vuu8he5RVUSPmqfRxJ+Qga5n7lFVRIuem8IeVDqosWv+3q8C5ONo4HdzEpLiH7TgbluCw4cCq4y8zJmuuabXvDAtMZeAIz9g7v/z34UGwIZtwdeuYazbS5WJT/DyrHWunPbcK2y1zt+NaigO3ZyTJTvbENW6dc8LOH7w+Qhs3/tXlwKCSHFdEGsmYCzo0ks4f6hpvVLeT1H9SJH9c=</source>
   </file>
-  <file path="Component/FileSystem/Locator/Node/NodeInterface.php" hash="3a7b131baf73b127ce928a37d84a5f53" package="Sagres">
+  <file path="Component/FileSystem/Locator/Node/NodeInterface.php" hash="05b0b884fe97acdf6de7ea40350f9b41" package="Sagres">
     <docblock line="2">
       <description><![CDATA[This file is part of the Sagres package.]]></description>
       <long-description><![CDATA[<p>(c) nuno costa <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m">&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m</a></p>
@@ -402,19 +411,30 @@ file that was distributed with this source code.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="68" package="Default">
-        <name>getType</name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="66" package="Default">
+        <name>getRealPath</name>
         <type>function</type>
         <docblock line="62">
+          <description><![CDATA[the real path of the resource]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem\Locator\Node" line="74" package="Default">
+        <name>getType</name>
+        <type>function</type>
+        <docblock line="68">
           <description><![CDATA[the resource type]]></description>
           <long-description><![CDATA[<p>See the TYPE_ constants for a list of supported types</p>]]></long-description>
-          <tag line="62" name="return" description="" type="Integer">
+          <tag line="68" name="return" description="" type="Integer">
             <type by_reference="false">Integer</type>
           </tag>
         </docblock>
       </method>
     </interface>
-    <source>eJyVVE1vGjEQve+vmEMPgJoQem3UIFGiIqUEFaSqElI0eL27Vndtyx6Hoqr/vWPDkhTx0exld8cz77358u2drWzW7/Uy6MGiUh4KVUvgt0VHYAqgSsIcSyejSfzEUl6zb3TviC7ooA0I4wnhNn4PC4damByT7VqY5tPO+964hFWEuuYIu3GqrAhQ51ArIbVnVl0Y1yApo9+DrSWy7VnJdYp7mIzG0/k4QiWJVCHBGj3kypNTq0Ayh7Wiik9YvjfBCclE+V7vcKd/lw6b+pnGRnq2t8blyDTWaKlpec8s840n2SwfjEAybjlltI9ZW66JJumKGMuyATktzef+JBsMfVi11hf01h8DVYzzfxVlLKWZeXBzNRhcfbgZDJKxreTXySKl9yIxSt//Zb8z4CflER/u5fRxCrMvM/j8OOq2Rk7BYQNzLq8u4Z1FqnZH/fS2YcWE3FEtYs/g6UkYzc0IgjrJu8vFOiAaoYa1BCcx345D7OXdntFJCk7DyhhuvwbG4rEoYoTg3xSl6KwI5b+xF65q2TlNv3aKeITMmyVcoP7OuKeoeQi2MxmXzASdX2JUFF3xGVUdMdOUBX9WgfzFy+CPsZeSfMp2LyOO/qGEbavPUjDQlCOPcSxew6c9fzUyb+SYceQxjn9SoI1tU2jP51Imn8WP2fgJ0jyiJr9dUb5pfLrUfLDWuHhjRAh/KDEuSindJY0Ljo0a//wF0NuU5g==</source>
+    <source>eJyVVE1r20AQvetXzKEH2zRx3GtDY3AdYkgdUxtKwWDGq5W0RNoVu7NxTel/7+zKcoLxR6KLpNmZ99587Nze1UWd9Hu9BHqwKJSDTJUS+F2jJTAZUCFhjrmVwSSeMZfX7BvcO6IL2msDwjhCuA3fw8yiFibFaLsWpvq28743NmJlviw5ot5alRcEqFMolZDaMavOjK2QlNGfoS4lsu1FyU2Me5yMxtP5OEBFiVQgwQYdpMqRVWtPMoWNooJPWL4z3grJROle73Cnf5cOm/qJxko6trfG5chUtdFS0/KeWeZbR7JaPhqBZOxyymhfk7ZcE03SZiGWZQNyWprP3Uk2GDq/bq2v6K0/eioY530VZSylmXlwczUYXH25GQyisa3kj8kipvcqMUjf/yV/E+An5hEe7uX0aQqzhxl8fxp1WyOnYLGCOZdX5/CpRip2R/34rv2aCbmjWoSewWoljOZmeEGd6N3lYh0QjVDDRoKVmDbjEHp5t2e0krzVsDaG26+BsXgsshAh+DdGKTorQrmf7IXrUnZO02+sIh4h82EJF6h/Me4pah6CZibDJTNep5cYFQVXfEFVBsw4Zd6dVSD/8GVwx9hzSS5mu5cRRv9QQtPqsxQMNOXIYxyLt/Dxnr8ZmQ9yzDjyGEeTAjbQ7X5qSQ+p3LuoeF7K83S7lGhbtxTt+VzK6LP4PRuvII4/anLNRuDF5uIOdb6ujQ0LKkC4Q5nhXubSXtK54Nig8d9/hha0uw==</source>
   </file>
   <file path="Component/FileSystem/Locator/Node/LinkNode.php" hash="dde4f293a2f98c0dce2cb361b9ca8bc5" package="Sagres">
     <docblock line="2">
@@ -482,7 +502,33 @@ file that was distributed with this source code.</p>]]></long-description>
     </class>
     <source>eJyNkEtvwjAQhO/5FXtsUXmk16IWCYGE1HIoHLkszgZbdezIXvNQ1f/eTZrAqRInW+P1zjczfat1nY0HgwwGsNUmQmksgZw1BgZfAmuCDR4CNZL6wgONZLYZf1CP4JLzoHxkhGlzn5UBnfIFttpI+eq1m1760O4qk7Xyo74Ec9AM6AqwRpGL4upKHypk490T1JZQtKOhU/vvfTVfrDeLZlWLyBoZThihMJGD2SemAk6GtbwIfvQpKBKj4so76/i7OCKNM4cVRdF7cTf3Ve0dOd4txWVziUzVbnFWVDdYL1nf1VWCFBtjTa7FlB1/zsLgvOQ7orG4t/QvBMxi2vfqzbSfx8RaqruvaNllnJjnk2GeD58ned6KfcEfq22bWlmMET471LXnpU+uuEWiM5MrItyCZ99Z9vMLgmK44Q==</source>
   </file>
-  <file path="Component/FileSystem/Locator.php" hash="7ee35c1abae9592e403b3841ce1fa72e" package="Sagres">
+  <file path="Component/FileSystem/Copy.php" hash="a3f1f974ebf5eda178363753b68430d6" package="Sagres">
+    <docblock line="2">
+      <description><![CDATA[This file is part of the Sagres package.]]></description>
+      <long-description><![CDATA[<p>(c) nuno costa <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m">&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m</a></p>
+
+<p>For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.</p>]]></long-description>
+      <tag line="2" name="package" description="Sagres"/>
+    </docblock>
+    <namespace-alias name="AbstractNode">Sagres\Component\FileSystem\Locator\Node\AbstractNode</namespace-alias>
+    <class final="false" abstract="false" namespace="Sagres\Component\FileSystem" line="27" package="Sagres\FileSystem">
+      <name>Copy</name>
+      <full_name>\Sagres\Component\FileSystem\Copy</full_name>
+      <extends/>
+      <docblock line="15">
+        <description><![CDATA[Copy files]]></description>
+        <long-description><![CDATA[<p>It handles the logic needed to make copying files in php esay and powerfull</p>]]></long-description>
+        <tag line="15" name="package" description="Sagres"/>
+        <tag line="15" name="subpackage" description="FileSystem"/>
+        <tag line="15" name="author" description="nuno costa &lt;nuno@francodacosta.com&gt;"/>
+        <tag line="15" name="since" description="10-11-2011"/>
+        <tag line="15" name="license" description="MIT"/>
+      </docblock>
+    </class>
+    <source>eJyNUU1PwzAMvfdX+AgT+yjXTTA0bdKksct27MVL3SZam1SJSzUh/jtuaOEE4pTk5dl+73n13OgmmU8mCUzgrE2AwlQEcjboGVwBrAlOWHrqIXXFkmbC7el36h5sax0oFxhh1d/XhUerXI4RmylXPw3snfOxV9FWlVQ0N29KzYA2h8ooskGm2sL5Gtk4+wBNRSjYm6Eu1h32m+3xtO1bRYmskaHDALkJ7M2lZcqhM6zlR+QH13pFMij/1rse9A92BJonicWagnyMaLZxdeMsWc52MuZ0C0z1MmnDn4Ts4BSy89lR5mUvF1GEivvHcgx3I5aj8jDI2TNocS9A9Fe50iiwRLn4YAc1XinmZGz5VSf5gGwLKOAt5ta4jnyf568GYR3ay4j+yB352LKWtfxvidLLWMkpXUzTdPq4SNMIjst73Z9joqrCEKLb5D1JPj4B4bDJRA==</source>
+  </file>
+  <file path="Component/FileSystem/Locator.php" hash="4bb80ca54ddea7cb9f6abab83c0f0ad9" package="Sagres">
     <docblock line="2">
       <description><![CDATA[This file is part of the Sagres package.]]></description>
       <long-description><![CDATA[<p>(c) nuno costa <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m">&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m</a></p>
@@ -641,41 +687,443 @@ be included.</p>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="165" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="174" package="Default">
         <name>getFiles</name>
         <type>function</type>
-        <docblock line="161">
+        <docblock line="170">
           <description><![CDATA[get all files nodes]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="161" name="return" description="of AbstractNode Implementation (FileNode and LinkNode)" type="Array">
-            <type by_reference="false">Array</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="175" package="Default">
-        <name>getFolders</name>
-        <type>function</type>
-        <docblock line="170">
-          <description><![CDATA[get all folder nodes]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="170" name="return" description="of AbstractNode Implementation (FolderNode)" type="Array">
+          <tag line="170" name="return" description="of AbstractNode Implementation (FileNode and LinkNode)" type="Array">
             <type by_reference="false">Array</type>
           </tag>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="184" package="Default">
+        <name>getFolders</name>
+        <type>function</type>
+        <docblock line="179">
+          <description><![CDATA[get all folder nodes]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="179" name="return" description="of AbstractNode Implementation (FolderNode)" type="Array">
+            <type by_reference="false">Array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="193" package="Default">
         <name>get</name>
         <type>function</type>
-        <docblock line="180">
+        <docblock line="189">
           <description><![CDATA[return all nodes (file and folder)]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="180" name="return" description="of AbstractNode Implementation (FileNode, LinkNode and FolderNode)" type="Array">
+          <tag line="189" name="return" description="of AbstractNode Implementation (FileNode, LinkNode and FolderNode)" type="Array">
             <type by_reference="false">Array</type>
           </tag>
         </docblock>
       </method>
     </class>
-    <source>eJylV21v4kYQ/s6vmJOQMIiEpB9zR5o0R9roKDlBWikqFVrsBdyYXeRdh0NV/ntnZm1jDA5Jyhdgd97nmZf98vNqsap1Wq0atOBhERqYhZEE/F6J2IKegV1IGIl5LOnIfxJzeYq0RO75TVCJ0uBrYwV8od9Xs1goXweCz059vbxMqW91zLJmSRQhx2oTh/OFBaECiEJfKoNa1UzHS2FDrdqwiqTAs+dQrpmvf3fTG4x6JIpNtAthYS0MBKGxcThNrAxgHdoF3qD5RiexL1FRkNt7ldqfuoNHnVpNiaU0eJGdjm/0cqWVVHZ8i2pGG2Pl8nOtlphXKca9H75ckeXjoXS6B9re6kQF+c3no0L62hdWx+MBWj2+1VEgY/r5XkY8/wBbP1RPH2C7nmL4hW8d6xZKmDFHBn4kjIGleEIIhRYwrRuwGiK6lh2zkn4423BSDSD5jP1GUkV5Z+jkqiszCVcmmWan+/QisQsU/Ta0oqxQISDOz07Oz09+Ojs/58MMpb/fPTB0nFupk7V/a4Af9p4+LfgN3TCpM0DBAbtZka3u+upZxHAdx2KTnnT4exWHzxgVqGdR6IIgIq+JsT2ogZx18qmUKIkf0cbBf0WXCFCVAAzMHNXFKcQpjVSbfhLHiBEsZGNzldhAxBJGWJtqDvWVsItd3ckUI4rtQPlUHKRhxNI9pm0ykYsqfeqKnOpCnar75JIsiJ4Z5il9ajPTOhqU6O6JFe/p6uWAZ+QYB4AhA6xIpKgmy0pOGln2sVgCztCcwC5ivTYw/kPJHwh07FF/iiiReU84FhJ2YF9+OToGG5+/AOfqyeVc2gdMv9dsFmjo41NLZaKLi4fH771J/27w7eJ1ktu7fm+XpBBjjttff1NiFDeAMt00luKpkJvDKu77X3vDaiWuFt6rJpAzkUR2XywnBRQOlsq8eI0boRAKFmtE+xILnfQaHogYWWjAKewFu9Ks7O9LJQYdCF2zKFcXVVUbNNsloohbpZVcVjqxOXlW7JlQbgzZMDJuXgaafcIZ6y9Ydt3JQiHzJMIegdFAeYbQtw5xULeQPJc4pRHtR0kgg9OSMrc6ZMDF3y3iRLFYNSZ8lq1WG0cynrpOEyoTIpY1mrBt+KyQuAp68hgdbyvZlUmvUs9ODvh2rOpcS2nnMrrQ6Jy2Oo2s7PKEhjPvU2gmQRinXahccFuoVa4FjhPx1GDnZ3TZaBZBs21sTNlledv1IG+AOVmp/2X9sWA2toqAJOmVVNXWrxeEIc/j+UCbEnIgogPmCIj+U7cLMxEZWWZlO3hR60LmYC5mv1CKgSSqPVOKpmMa5xPGsJelqL0V3oRLOKti3w1PNnBY475RLvqvn+z+8yNtZBadA3VfLvxAc2VKMBRcLFGVLRQXF4TDJkyTQhWVa8FIuUP/7loZ7dbK+ytlmJlWWTLFGZ4HvkS9M7y5AJB/HulpXhtf74a9m4f74eNk1Pt+PbzGn1QxrUYbfu3f/zK5H/QfkaYQc3xKSIEISeXhQ6GOK6LrNWV0FA3LiYrW7SWylMd0HaEmzgaHCnu3cKuEnv6DA+ZwahL1pPRaTXimHNwcjiwOcBVLm8QKxh9a2A9ug3l+d5asQ2tHHZVTO8In3TZGVKFZKTPTXrRTrlITK2xp21AXBFKRvkFi+vg5IK8sMMJd+bjA7Fn0BoEUB49YXxkDb9g40rA79CCMHaTyjeOwCSkMSHvVpouLCuD+kL60eJ8po4ifCLTk7Kycd0t8jC8RU/w0By+Lcf7iGOTYqGoVqJu4jFeGUGZ3YZ08ar9bk4oOfNCPHH3HjXc7yjHzHVWVAymx4DWHtkmPByRFMe1L/y8f7TwZLPMd7lX5xe/ByVLGc8S/87EYjDYUDl1683fWy39nglW0</source>
+    <source>eJy1WG1v2zYQ/m5g/+EKGPALnKTZx7TOkqXOFtRNijgdUMyDQUu0rUUmBZGKawz977s7SrQsW3GTYf5ShTze+3N82Pe/JIukcdLtNqALD4vIwCyKJeC/iUgt6BnYhYSRmKeSloJHMZfHKEvi7aADKlMaAm2sgPf0fTFLhQp0KHjtONDL81z6Wqesa5bFMZ5I1mk0X1gQKoQ4CqQyaFXNdLoUNtKqB0ksBa49RXLF54Y3V4Pb0YBUsYt2ISyshIEwMjaNppmVIawiu8AddN/oLA0kGgq9vxe5/3k4uHTSaCixlAY3itXxlV4mWkllx9doZrQ2Vi7fNRqZeVZiPPgWyIQ8H99LZ/tW22udqdDvvDuoZKgDYXU6vkWvx9c6DmVKny89iOuvODaM1OMrjl1OMf0isO7oppWwYk4MglgYA0vxiC0UWcCyrsFqiGlbnphEBtFszUU1gOIzjhtFFdWdW8ebrq0kXJhsWqzuyovMLlD1j3Ur6ooUNsTp26PT06Of356e8mLRpZ9uHrh1XFh5kI1/GoA/jp5+XfgdwzB5MEDJAbtOyFe3ffEkUrhMU7HOV0743ySNnjAr0Cyy0AdBQu0O5navBQrW6ScoURFfY42T/4wtEaIpAZiYOZpL8xanMhI2gyxNsUcQyMZ6kzhAxBJGiE01h2Yi7GLbdjbFjOI4UAGBgyyMWHubZTss5LJKv6aioPrQJHQfnZMH8RO3eS6f+8yyTgY1un06ivu09X1PZBQYJ4BbBtiQyLuaPKsEaWQ1xjIEnKNewC5SvTIw/qLkN2x0nFF/iDiTfiYcSgkHsKu/mh2Dgy9YgAv16Hwu7QOWv93plGToF9BIZaGzs4evnweT4c3tx7PnRa5vhoNtkVKOOW9//kWFUTwAqnLTVIrHUm32m7gbfhjc1xtxWHipmVDORBbbXbVcFFB4sdTWpd26EgpbwSJGdCAR6GTX8IWImYUWHMNOsmvdKv78XtuDrgndsKiii1DVA81+iTjmUWklw0pn1osXYC+U8mAoLiPj7stQc0x4xwYL1t10ulDJPItxRmA2UJ+h7ltFeFF3UdxrnNIVHcRZKMPjijFHHYrGxe8unUS1iBoTPclut4dXMq66SRMpE2Eva3RhM/DZIJ0q2fE5OjxWii2Tb+WRHe2J7RDq3EjpeR19aJ0cd09aBex8QaNZ+01kJmGU5lOoCrhNq9XSAncS+6nFwc9os9UpN81msLFkn/Vt6IEfgF6sMv+K+VhyG0dFSJp0IlW996sF9VC7zfcDMSU8gR0d8omQ5N/0+zATsZHVo+wHE7U+FAF6NbtAKSeSpHZcKbuOZZxPuIfbRYl6G+UdOIe3dce301NcOGxx1ymX/edXtv8KYm1kkZ09uK8CP9SMTAmGkosQVQWhODujPuzANCuhqIoFI+WW/IuxMtrGysuRcl+4VguZ8h3uE1+R3rq8GQB4fh7rqcfGh5v7wdXD3f3XyWjw+fL+Ej8JMd1WD34b3v06ubsdfkWZUs7xKSEFdkiuDx8KTaSIbtZUu6PsmBcqe7dTyEodczpCQ5wdjhTObuGohJ7+jRfM/tJk6lHplZrwnbKXORwgDnCRSpulCsavIux72aCv7xbJKtMOnw+brndSSaH0mVDRZ34QSjnE+5/JyubNBM2d+fFDg5PzS4OT3oF+eMKZu57d3fwJGxkfBVvXc2mkOubUZrf3sqVWjJS6tYebYOLzUVy8nLaYZvlXS4JaOCue110e8y/WTkU4oD5/KxbKf/r/mdWmal+UyZJEp/Ryd296T624HD/Ap/xnDgMKrY7pYzMA8qf8pcl8rooifiIRydui3DfLJJZLxBT/1wS0i6T5F9etx0bdqETbdMq0q8y98LtEpw/672hiOYBXxuF767DzjqMdct9J1QWQCwumecSm21x1ymI+l/9bPXq+GKzzBeHVxcXv4clSpjhA8hjLyehBadGV178zv/8LsECRXw==</source>
+  </file>
+  <file path="Component/FileSystem/Info.php" hash="ea39b41d60668f65dd6bdbf486e09f36" package="Sagres">
+    <docblock line="2">
+      <description><![CDATA[This file is part of the Sagres package.]]></description>
+      <long-description><![CDATA[<p>(c) nuno costa <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m">&#x6e;&#117;&#110;&#111;&#x40;&#x66;&#x72;&#97;&#110;&#99;&#x6f;&#x64;&#x61;&#99;&#111;s&#x74;&#x61;&#x2e;&#99;&#111;m</a></p>
+
+<p>For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.</p>]]></long-description>
+      <tag line="2" name="package" description="Sagres"/>
+    </docblock>
+    <namespace-alias name="ResourceNotFoundException">Sagres\Component\FileSystem\Exception\ResourceNotFoundException</namespace-alias>
+    <namespace-alias name="AbstractNode">Sagres\Component\FileSystem\Locator\Node\AbstractNode</namespace-alias>
+    <class final="false" abstract="false" namespace="Sagres\Component\FileSystem" line="29" package="Sagres\FileSystem">
+      <name>Info</name>
+      <full_name>\Sagres\Component\FileSystem\Info</full_name>
+      <extends/>
+      <docblock line="17">
+        <description><![CDATA[The Stat class makes it easy to get Resource information]]></description>
+        <long-description><![CDATA[<p>It wraps stat and lstat in a consistent object</p>]]></long-description>
+        <tag line="17" name="package" description="Sagres"/>
+        <tag line="17" name="subpackage" description="FileSystem"/>
+        <tag line="17" name="author" description="nuno costa &lt;nuno@francodacosta.com&gt;"/>
+        <tag line="17" name="since" description="10-11-2011"/>
+        <tag line="17" name="license" description="MIT"/>
+      </docblock>
+      <constant namespace="Sagres\Component\FileSystem" line="31">
+        <name>SIZE_B</name>
+        <value><![CDATA[1]]></value>
+      </constant>
+      <constant namespace="Sagres\Component\FileSystem" line="32">
+        <name>SIZE_KB</name>
+        <value><![CDATA[1024]]></value>
+      </constant>
+      <constant namespace="Sagres\Component\FileSystem" line="33">
+        <name>SIZE_MB</name>
+        <value><![CDATA[12302336]]></value>
+      </constant>
+      <constant namespace="Sagres\Component\FileSystem" line="35">
+        <name>PERMISSION_NUMBER</name>
+        <value><![CDATA[0]]></value>
+      </constant>
+      <constant namespace="Sagres\Component\FileSystem" line="36">
+        <name>PERMISSION_HUMAN</name>
+        <value><![CDATA[1]]></value>
+      </constant>
+      <property final="false" static="false" visibility="private" line="42" package="Default">
+        <name>$node</name>
+        <default><![CDATA[]]></default>
+        <docblock line="38">
+          <description><![CDATA[holds the node we use]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="38" name="var" description="" type="\Sagres\Component\FileSystem\Locator\Node\AbstractNode">
+            <type by_reference="false">\Sagres\Component\FileSystem\Locator\Node\AbstractNode</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="48" package="Default">
+        <name>$deviceNumber</name>
+        <default><![CDATA[]]></default>
+        <docblock line="44">
+          <description><![CDATA[device number]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="44" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="54" package="Default">
+        <name>$inodeNumber</name>
+        <default><![CDATA[]]></default>
+        <docblock line="50">
+          <description><![CDATA[inode number]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="50" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="60" package="Default">
+        <name>$inodeMode</name>
+        <default><![CDATA[]]></default>
+        <docblock line="56">
+          <description><![CDATA[inode mode]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="56" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="66" package="Default">
+        <name>$numberOfLinks</name>
+        <default><![CDATA[]]></default>
+        <docblock line="62">
+          <description><![CDATA[number of links]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="72" package="Default">
+        <name>$uid</name>
+        <default><![CDATA[]]></default>
+        <docblock line="68">
+          <description><![CDATA[user id of ownwe]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="68" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="78" package="Default">
+        <name>$gid</name>
+        <default><![CDATA[]]></default>
+        <docblock line="74">
+          <description><![CDATA[group id of group]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="74" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="84" package="Default">
+        <name>$deviceType</name>
+        <default><![CDATA[]]></default>
+        <docblock line="80">
+          <description><![CDATA[device type]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="80" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="90" package="Default">
+        <name>$size</name>
+        <default><![CDATA[]]></default>
+        <docblock line="86">
+          <description><![CDATA[size in bytes]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="86" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="96" package="Default">
+        <name>$accessTime</name>
+        <default><![CDATA[]]></default>
+        <docblock line="92">
+          <description><![CDATA[last access timestamp]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="92" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="102" package="Default">
+        <name>$modificationTime</name>
+        <default><![CDATA[]]></default>
+        <docblock line="98">
+          <description><![CDATA[last modification timestamp]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="98" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="108" package="Default">
+        <name>$lastInodeChangeTime</name>
+        <default><![CDATA[]]></default>
+        <docblock line="104">
+          <description><![CDATA[last inode change timestamp]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="104" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="114" package="Default">
+        <name>$blockSize</name>
+        <default><![CDATA[]]></default>
+        <docblock line="110">
+          <description><![CDATA[size of FS block]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="110" name="internal" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="120" package="Default">
+        <name>$blocksAllocated</name>
+        <default><![CDATA[]]></default>
+        <docblock line="116">
+          <description><![CDATA[number of 512kb blocks used]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="116" name="internal" description=""/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="128" package="Default">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="124">
+          <description><![CDATA[here we tell the class what node to use to get information from]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="124" name="param" description="the node to get information from" type="\Sagres\Component\FileSystem\Locator\Node\AbstractNode" variable="$node">
+            <type by_reference="false">\Sagres\Component\FileSystem\Locator\Node\AbstractNode</type>
+          </tag>
+        </docblock>
+        <argument line="128">
+          <name>$node</name>
+          <default><![CDATA[]]></default>
+          <type>AbstractNode</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="139" package="Default">
+        <name>getNode</name>
+        <type>function</type>
+        <docblock line="134">
+          <description><![CDATA[returns the filesystem node in use]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="134" name="return" description="" type="\Sagres\Component\FileSystem\Locator\Node\AbstractNode">
+            <type by_reference="false">\Sagres\Component\FileSystem\Locator\Node\AbstractNode</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Sagres\Component\FileSystem" line="151" package="Default">
+        <name>populate</name>
+        <type>function</type>
+        <docblock line="144">
+          <description><![CDATA[populates the class properties according to information gathered from the OS]]></description>
+          <long-description><![CDATA[<p>links will be recognized and information will be relative to the link
+and not tho the resource they point to</p>]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="184" package="Default">
+        <name>getDeviceNumber</name>
+        <type>function</type>
+        <docblock line="181">
+          <description><![CDATA[Gets the device number]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="193" package="Default">
+        <name>getInodeNumber</name>
+        <type>function</type>
+        <docblock line="189">
+          <description><![CDATA[gets the inode number
+**On windows is allways 0**]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="201" package="Default">
+        <name>getInodeMode</name>
+        <type>function</type>
+        <docblock line="198">
+          <description><![CDATA[get inode protection mode]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="209" package="Default">
+        <name>getNumberOfLinks</name>
+        <type>function</type>
+        <docblock line="206">
+          <description><![CDATA[get the number of links]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="218" package="Default">
+        <name>getUid</name>
+        <type>function</type>
+        <docblock line="214">
+          <description><![CDATA[Owner user id
+**On windows is allways 0**]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="227" package="Default">
+        <name>getGid</name>
+        <type>function</type>
+        <docblock line="223">
+          <description><![CDATA[Owner group id
+**On windows is allways 0**]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="235" package="Default">
+        <name>getDeviceType</name>
+        <type>function</type>
+        <docblock line="232">
+          <description><![CDATA[gets the device type if it is an inode device]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="251" package="Default">
+        <name>getSize</name>
+        <type>function</type>
+        <docblock line="240">
+          <description><![CDATA[gets the file size in the specified conversion rate]]></description>
+          <long-description><![CDATA[<p>defaul is returning in bytes but other values are available:</p>
+
+<ul>
+<li>::SIZE_B - size in bytes</li>
+<li>::SIZE_KB - size in kilobytes</li>
+<li>::SIZE_MB - size in megabytes</li>
+</ul>]]></long-description>
+          <tag line="240" name="param" description="" type="Integer" variable="$conversion">
+            <type by_reference="false">Integer</type>
+          </tag>
+        </docblock>
+        <argument line="251">
+          <name>$conversion</name>
+          <default><![CDATA[1]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="259" package="Default">
+        <name>getAccessTime</name>
+        <type>function</type>
+        <docblock line="256">
+          <description><![CDATA[timestamp of last access]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="267" package="Default">
+        <name>getModificationTime</name>
+        <type>function</type>
+        <docblock line="264">
+          <description><![CDATA[timestamp of last modification]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="275" package="Default">
+        <name>getLastInodeChangeTime</name>
+        <type>function</type>
+        <docblock line="272">
+          <description><![CDATA[timestamp of last inode change]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="284" package="Default">
+        <name>getBlockSize</name>
+        <type>function</type>
+        <docblock line="280">
+          <description><![CDATA[gets FS block size
+**On windows is allways -1 **]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="293" package="Default">
+        <name>getBlocksAllocated</name>
+        <type>function</type>
+        <docblock line="289">
+          <description><![CDATA[number of 512-byte blocks allocated
+**On windows is allways -1**]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="302" package="Default">
+        <name>getOwnerUsername</name>
+        <type>function</type>
+        <docblock line="298">
+          <description><![CDATA[gets the username of the resource owner]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="298" name="return" description="" type="String|NULL">
+            <type by_reference="false">String</type>
+            <type by_reference="false">NULL</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="316" package="Default">
+        <name>getGroupName</name>
+        <type>function</type>
+        <docblock line="312">
+          <description><![CDATA[gets the groupname of the resource]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="312" name="return" description="" type="String|NULL">
+            <type by_reference="false">String</type>
+            <type by_reference="false">NULL</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="331" package="Default">
+        <name>getOctalPermissions</name>
+        <type>function</type>
+        <docblock line="326">
+          <description><![CDATA[get resource permissions in Ocatal format (ex: 0777)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="326" name="return" description="" type="String">
+            <type by_reference="false">String</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="339" package="Default">
+        <name>getHumanReadablePermissions</name>
+        <type>function</type>
+        <docblock line="335">
+          <description><![CDATA[gets the resource permissions in a human readable way, unix style -rwxrwxrwx]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="335" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Sagres\Component\FileSystem" line="404" package="Default">
+        <name>getPermissions</name>
+        <type>function</type>
+        <docblock line="395">
+          <description><![CDATA[gets the resource permissions according to the desired format]]></description>
+          <long-description><![CDATA[<p>see PERMISSION_* constants</p>]]></long-description>
+          <tag line="395" name="param" description="" type="Integer" variable="$format">
+            <type by_reference="false">Integer</type>
+          </tag>
+          <tag line="395" name="throws" description="" type="\Sagres\Component\FileSystem\UnexpectedValueException">
+            <type by_reference="false">\Sagres\Component\FileSystem\UnexpectedValueException</type>
+          </tag>
+          <tag line="395" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="404">
+          <name>$format</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <source>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</source>
   </file>
   <package name="Default"/>
   <package name="Sagres">
