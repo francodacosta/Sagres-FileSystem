@@ -163,4 +163,13 @@ abstract class AbstractNode implements NodeInterface
     {
         return $this->getPath();
     }
+    /**
+     * (non-PHPdoc)
+     * @see Sagres\Component\FileSystem\Locator\Node.NodeInterface::getRealPath()
+     */
+    public function getRealPath()
+    {
+        return realpath($this->getPath());
+    }
+
 }

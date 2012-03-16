@@ -60,6 +60,12 @@ Interface NodeInterface
     public function getPath();
 
     /**
+     * the real path of the resource
+     * @return string
+     */
+    public function getRealPath();
+
+    /**
      * the resource type
      *
      * See the TYPE_ constants for a list of supported types

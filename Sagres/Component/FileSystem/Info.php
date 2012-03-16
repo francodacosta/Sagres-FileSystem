@@ -9,9 +9,11 @@
  *
  * @package Sagres
  */
-
 namespace Sagres\Component\FileSystem;
+
+use Sagres\Component\FileSystem\Exception\ResourceNotFoundException;
 use Sagres\Component\FileSystem\Locator\Node\AbstractNode;
+
 /**
  * The Stat class makes it easy to get Resource information
  *
@@ -24,11 +26,14 @@ use Sagres\Component\FileSystem\Locator\Node\AbstractNode;
  * @since 10-11-2011
  * @license MIT
  */
-class Stat
+class Info
 {
     const SIZE_B = 1;
     const SIZE_KB = 1024;
     const SIZE_MB = 12302336;
+
+    const PERMISSION_NUMBER = 0;
+    const PERMISSION_HUMAN = 1;
 
     private $node;
 
@@ -71,7 +76,13 @@ class Stat
 
     private function populate()
     {
-        if ($this->getNode() instanceof \Sagres\Component\FileSystem\Locator\Node\LinkNode) {
+        $node = $this->getNode();
+        if(! $node->exists()) {
+            throw new ResourceNotFoundException('Can not stat an non existent resource ' . $node);
+        }
+
+        clearstatcache();
+        if ($node instanceof \Sagres\Component\FileSystem\Locator\Node\LinkNode) {
             $stat = lstat($node);
         } else {
             $stat = stat($node);
@@ -90,7 +101,7 @@ class Stat
         $this->lastInodeChangeTime = $stat['ctime'];
         $this->blockSize = $stat['blksize'];
         $this->blocksAllocated = $stat['blocks'];
-
+        clearstatcache();
     }
 
     /**
@@ -208,6 +219,129 @@ class Stat
     public function getBlocksAllocated()
     {
         return $this->blocksAllocated;
+    }
+
+    /**
+     * gets the username of the resource owner
+     * @return String|NULL
+     */
+    public function getOwnerUsername()
+    {
+       if (function_exists('posix_getpwuid')) {
+            $info = @posix_getpwuid($this->getUid());
+            return $info['name'];
+        } else {
+            throw new \RuntimeException('posix extension not installed');
+        }
+    }
+
+    /**
+     * gets the groupname of the resource
+     * @return String|NULL
+     */
+    public function getGroupName()
+    {
+        if (function_exists('posix_getgrgid')) {
+             $info = @posix_getgrgid($this->getGid());
+             return $info['name'];
+        }else {
+            throw new \RuntimeException('posix extension not installed');
+        }
+    }
+
+    /**
+     * get resource permissions in Ocatal format (ex: 0777)
+     *
+     * @return String
+     */
+    public function getOctalPermissions(){
+       return substr(sprintf('%o', fileperms($this->getNode())), -4);
+    }
+
+    /**
+     * gets the resource permissions in a human readable way, unix style -rwxrwxrwx
+     * @return string
+     */
+    public function getHumanReadablePermissions()
+    {
+        $perms = fileperms($this->getNode());
+
+        // @codeCoverageIgnoreStart
+        if (($perms & 0xC000) == 0xC000) {
+            // Socket
+            $info = 's';
+        } elseif (($perms & 0xA000) == 0xA000) {
+            // Symbolic Link
+            $info = 'l';
+        } elseif (($perms & 0x8000) == 0x8000) {
+            // Regular
+            $info = '-';
+        } elseif (($perms & 0x6000) == 0x6000) {
+            // Block special
+            $info = 'b';
+        } elseif (($perms & 0x4000) == 0x4000) {
+            // Directory
+            $info = 'd';
+        } elseif (($perms & 0x2000) == 0x2000) {
+            // Character special
+            $info = 'c';
+        } elseif (($perms & 0x1000) == 0x1000) {
+            // FIFO pipe
+            $info = 'p';
+        } else {
+            // Unknown
+            $info = 'u';
+        }
+        // @codeCoverageIgnoreEnd
+
+        // Owner
+        $info .= (($perms & 0x0100) ? 'r' : '-');
+        $info .= (($perms & 0x0080) ? 'w' : '-');
+        $info .= (($perms & 0x0040) ?
+                (($perms & 0x0800) ? 's' : 'x' ) :
+                (($perms & 0x0800) ? 'S' : '-'));
+
+        // Group
+        $info .= (($perms & 0x0020) ? 'r' : '-');
+        $info .= (($perms & 0x0010) ? 'w' : '-');
+        $info .= (($perms & 0x0008) ?
+                (($perms & 0x0400) ? 's' : 'x' ) :
+                (($perms & 0x0400) ? 'S' : '-'));
+
+        // World
+        $info .= (($perms & 0x0004) ? 'r' : '-');
+        $info .= (($perms & 0x0002) ? 'w' : '-');
+        $info .= (($perms & 0x0001) ?
+                (($perms & 0x0200) ? 't' : 'x' ) :
+                (($perms & 0x0200) ? 'T' : '-'));
+
+        return $info;
+    }
+
+    /**
+     * gets the resource permissions according to the desired format
+     *
+     * see PERMISSION_* constants
+     *
+     * @param Integer $format
+     * @throws UnexpectedValueException
+     * @return string
+     */
+    public function getPermissions($format = 0)
+    {
+        switch($format) {
+            case self::PERMISSION_HUMAN:
+                return $this->getHumanReadablePermissions();
+                break;
+
+            case self::PERMISSION_NUMBER:
+                return $this->getOctalPermissions();
+                break;
+
+            default:
+                throw new \UnexpectedValueException('Invalid permissions format :' . $format);
+                break;
+        }
     }
 
 }
