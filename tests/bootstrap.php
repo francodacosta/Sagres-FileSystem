@@ -5,15 +5,11 @@ require_once __DIR__ . '/../Sagres/Component/FileSystem/Exception/ResourceExists
 require_once __DIR__ . '/../Sagres/Component/FileSystem/Exception/IOException.php';
 
 // Nodes
-// require_once __DIR__ . '/../Sagres/Component/FileSystem/Locator/Node/NodeInterface.php';
-require_once __DIR__ . '/../Sagres/Component/FileSystem/Locator/Node/Node.php';
-// require_once __DIR__ . '/../Sagres/Component/FileSystem/Locator/Node/FileNode.php';
-// require_once __DIR__ . '/../Sagres/Component/FileSystem/Locator/Node/FolderNode.php';
-// require_once __DIR__ . '/../Sagres/Component/FileSystem/Locator/Node/LinkNode.php';
+require_once __DIR__ . '/../Sagres/Component/FileSystem/Node.php';
 
 // classes
 require_once __DIR__ . '/../Sagres/Component/FileSystem/Locator.php';
-require_once __DIR__ . '/../Sagres/Component/FileSystem/Info.php';
+require_once __DIR__ . '/../Sagres/Component/FileSystem/Copy.php';
 
 
 

@@ -15,9 +15,8 @@ use Sagres\Component\FileSystem\Exception\IOException;
 
 use Sagres\Component\FileSystem\Exception\ResourceExistsException;
 
-use Sagres\Component\FileSystem\Locator\Node\AbstractNode;
-use Sagres\Component\FileSystem\Locator\Node\FileNode;
-use Sagres\Component\FileSystem\Locator\Locator;
+use Sagres\Component\FileSystem\Node;
+use Sagres\Component\FileSystem\Locator;
 /**
  * Copy files
  *
@@ -34,35 +33,118 @@ class Copy
 {
 
 
-    public function copy($sourceFile, $destinationFile, $overwrite = false, $mode = null)
+    /**
+     * Converts a path into an SplFileInfo Object if it is not already one
+     * @param SplFileInfo|String|Node $file
+     * @return SplFileInfo
+     */
+    private function createNode($file)
     {
-        if (! $sourcefile instanceof Sagres\Component\FileSystem\Locator\Node\AbstractNode) {
-            $sourceFile = Locator::resolveNode($sourceFile);
+        if (! $file instanceof \Sagres\Component\FileSystem\Node) {
+            $file = new node($file);
         }
 
-        if ($sourceFile->isFolder()) {
+        return $file;
+    }
+
+    /**
+     * calculates the destination filename
+     * if destinationFile is a folder it will append $sourceFile name to destination
+     * @param Node $sourceFile
+     * @param Node $destinationFile
+     * @return Node
+     */
+    private function computeFinalDestination(Node $sourceFile, Node $destinationFile)
+    {
+        if($destinationFile->isDir()) {
+            $destinationFile = new Node($destinationFile . DIRECTORY_SEPARATOR . $sourceFile->getFileName());
+        }
+
+        return $destinationFile;
+    }
+
+
+    /**
+     *
+     * calculates the relative path of a Resource, based on the current path,
+     * the initial folder path and the new folder path
+     *
+     * file: /etc/abc/def
+     * source: /etc
+     * new: /tmp
+     *
+     * result: /tmp/abc/def
+     *
+     * @param Node $sourceFile
+     * @param String $sourceFolder
+     * @param String $destinationFolder
+     */
+
+    private function calculateRelativePath(Node $sourceFile, $sourceFolder, $destinationFolder)
+    {
+        if ($sourceFile->isDir()) {
+            $sourceString = $sourceFile->getRealPath();
+        } else {
+            $sourceString = dirname($sourceFile->getRealPath());
+        }
+        return str_replace($sourceFolder, $destinationFolder, $sourceString);
+    }
+
+
+    public function copy($sourceFile, $destinationFile, $overwrite = false)
+    {
+        $sourceFile = $this->createNode($sourceFile);
+        $destinationFile = $this->createNode($destinationFile);
+        $destinationFile = $this->computeFinalDestination($sourceFile, $destinationFile);
+
+        if ($sourceFile->isDir()) {
             throw new \UnexpectedValueException(sprintf(
-                "%s is a folder, copyFile() can only copy file, use copySet() function instead",
+                "%s is a folder, copy() can only copy files",
                  $sourceFile
             ));
         }
 
-        if (! $destinationFile instanceof Sagres\Component\FileSystem\Locator\Node\AbstractNode) {
-            $destinationFile = Locator::resolveNode($destinationFile);
-        }
-
-        if($destinationFile->isFolder()) {
-            $destinationFile = new FileNode($destinationFile . $sourceFile->getName());
-        }
-
-        if ($destinationFile->isFile() && !$overwrite) {
-            throw new ResourceExistsException(sprintf("$s exists and $overwrite is false", $destinationFile));
+        if ($destinationFile->exists() && !$overwrite) {
+            throw new ResourceExistsException(sprintf("%s exists and \$overwrite is false", $destinationFile));
         }
 
         try {
             copy($sourceFile, $destinationFile);
         } catch (\Exception $e) {
+            // @codeCoverageIgnoreStart
             throw new IOException(sprintf("%s => %s, Can not copy, reason: %s", $sourceFile, $destinationFile, $e->getMessage()));
+            // @codeCoverageIgnoreEnd
         }
+    }
+
+    public function copyFolder($source, $destination, $overwrite = false)
+    {
+        $sourceFile = $this->createNode($sourceFile);
+        $destinationFile = $this->createNode($destinationFile);
+
+        if (!$sourceFile->isFolder()) {
+            throw new \UnexpectedValueException(sprintf(
+                    "%s : source needs to be a folder",
+                    $sourceFile
+            ));
+        }
+
+        if (!$destination->isFolder()) {
+            throw new \UnexpectedValueException(sprintf(
+                    "%s : destination needs to be a folder",
+                    $sourceFile
+            ));
+        }
+
+        $locator = new Locator();
+        $locator->addRecursive($sourceFile->getRealPath());
+
+        $folders = $locator->getFolders();
+
+        foreach($folders as $folder) {
+            mkdir($this->calculateRelativePath($folder, $source, $destination), null,  true);
+        }
+
+        $files = $locator->getFiles();
     }
 }

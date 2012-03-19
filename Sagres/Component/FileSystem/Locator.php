@@ -13,7 +13,7 @@
 namespace Sagres\Component\FileSystem;
 
 use Sagres\Component\FileSystem\Exception\ResourceNotFoundException;
-use Sagres\Component\FileSystem\Locator\Node\Node;
+use Sagres\Component\FileSystem\Node;
 
 /**
  * The Locator class makes it easy to locate/specify files or folders in the
@@ -126,20 +126,13 @@ class Locator
      *
      * @param String $node
      * @throws UnexpectedValueException
-     * @return \Sagres\Component\FileSystem\Locator\Node\Node
+     * @return \Sagres\Component\FileSystem\Node
      */
     public function resolveNode($path)
     {
 
-//         try {
-//             $type = filetype($path) ;
-//         } catch (\Exception $e) {
-//             throw new ResourceNotFoundException($path . ' was not found : ' . $e->getMessage());
-//         }
-
         return new Node($path);
 
-//         return $ret;
     }
 
     /**
